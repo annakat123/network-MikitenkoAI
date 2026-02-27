@@ -1,0 +1,777 @@
+1.	Определить физический и сетевой адреса локального хоста и его доменное имя.
+C:\Users\Ivan>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Study_Ivan
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : misis.ru
+
+Unknown adapter Karing TUN Network Adapter:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Karing TUN Network Adapter Tunnel
+   Physical Address. . . . . . . . . :
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 10.20.0.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.252
+   Default Gateway . . . . . . . . . : 10.20.0.2
+   DNS Servers . . . . . . . . . . . : 10.20.0.2
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : A4-F9-33-31-30-D6
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : A6-F9-33-31-30-D5
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter WiFi:
+
+   Connection-specific DNS Suffix  . : misis.ru
+   Description . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX201 160MHz
+   Physical Address. . . . . . . . . : B6-6F-07-78-0D-EC
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 10.54.146.129(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Lease Obtained. . . . . . . . . . : Thursday, February 19, 2026 8:59:05 AM
+   Lease Expires . . . . . . . . . . : Thursday, February 19, 2026 11:43:35 AM
+   Default Gateway . . . . . . . . . : 10.54.0.1
+   DHCP Server . . . . . . . . . . . : 10.54.0.1
+   DNS Servers . . . . . . . . . . . : 10.54.0.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : A4-F9-33-31-30-D9
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+
+
+
+2.	Просмотреть таблицу преобразования физических адресов. 
+	Сохранить полученную информацию в файле.
+	
+C:\Users\Ivan>arp -a
+
+Interface: 10.20.0.1 --- 0x9
+  Internet Address      Physical Address      Type
+  10.20.0.2                                   dynamic
+  10.20.0.3                                   static
+  224.0.0.2                                   static
+  224.0.0.22                                  static
+  224.0.0.251                                 static
+  224.0.0.252                                 static
+  239.255.255.250                             static
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  10.54.181.61          f8-3d-c6-b0-8d-18     dynamic
+  10.54.204.178         0e-d8-80-4f-f6-5c     dynamic
+  10.54.255.255         ff-ff-ff-ff-ff-ff     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+
+
+
+3.	Командой ping проверить доступность следующих узлов: 
+C:\Users\Ivan>ping 127.0.0.1
+
+Pinging 127.0.0.1 with 32 bytes of data:
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+
+Ping statistics for 127.0.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\Users\Ivan>ping localhost
+
+Pinging Study_Ivan [::1] with 32 bytes of data:
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+
+Ping statistics for ::1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\Users\Ivan>ping example.com
+
+Pinging example.com [8.6.112.0] with 32 bytes of data:
+Reply from 8.6.112.0: bytes=32 time=13ms TTL=54
+Reply from 8.6.112.0: bytes=32 time=14ms TTL=54
+Reply from 8.6.112.0: bytes=32 time=61ms TTL=54
+Reply from 8.6.112.0: bytes=32 time=29ms TTL=54
+
+Ping statistics for 8.6.112.0:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 13ms, Maximum = 61ms, Average = 29ms
+
+
+C:\Users\Ivan>ping 10.54.0.1
+
+Pinging 10.54.0.1 with 32 bytes of data:
+Reply from 10.54.0.1: bytes=32 time=7ms TTL=64
+Reply from 10.54.0.1: bytes=32 time=8ms TTL=64
+Reply from 10.54.0.1: bytes=32 time=54ms TTL=64
+Reply from 10.54.0.1: bytes=32 time=40ms TTL=64
+
+Ping statistics for 10.54.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 7ms, Maximum = 54ms, Average = 27ms
+
+C:\Users\Ivan>ping 10.54.181.61
+
+Pinging 10.54.181.61 with 32 bytes of data:
+Reply from 10.54.181.61: bytes=32 time=455ms TTL=128
+Reply from 10.54.181.61: bytes=32 time=62ms TTL=128
+Reply from 10.54.181.61: bytes=32 time=89ms TTL=128
+Reply from 10.54.181.61: bytes=32 time=90ms TTL=128
+
+Ping statistics for 10.54.181.61:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 62ms, Maximum = 455ms, Average = 174ms
+
+C:\Users\Ivan>ping 10.54.204.178
+
+Pinging 10.54.204.178 with 32 bytes of data:
+Reply from 10.54.204.178: bytes=32 time=28ms TTL=64
+Reply from 10.54.204.178: bytes=32 time=56ms TTL=64
+Reply from 10.54.204.178: bytes=32 time=17ms TTL=64
+Reply from 10.54.204.178: bytes=32 time=32ms TTL=64
+
+Ping statistics for 10.54.204.178:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 17ms, Maximum = 56ms, Average = 33ms
+
+
+
+
+4.	Просмотреть таблицу преобразования адресов и 
+	сравнить ее с результатами, полученными в задании 1.
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  10.54.181.61          f8-3d-c6-b0-8d-18     dynamic
+  10.54.204.178         0e-d8-80-4f-f6-5c     dynamic
+  10.54.255.255         ff-ff-ff-ff-ff-ff     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+
+
+
+5.	Сделать перерыв в сетевой активности на несколько минут, 
+	после которого повторить предыдущий пункт. 
+	Пояснить причины изменений (или отсутствия таковых) в таблице arp 
+	за время перерыва.
+	Через 5 минут:
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+
+
+
+6.	Добавить в таблицу статическую запись (действительные аппаратный и 
+	сетевой адреса одной из соседних машин) НЕ ПОЛУЧАЕТСЯ В МИСИСЕ
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  10.54.165.83          1c-79-2d-3c-6d-50     dynamic
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+
+C:\Users\Ivan>arp -d 10.54.165.83
+
+C:\Users\Ivan>arp -s 10.54.165.83 00-50-56-98-c7-8e
+The ARP entry addition failed: Access is denied. (НЕ УСПЕВАЛ ТУТ ВИДИМО)))
+
+ТУТ УСПЕЛ
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+
+C:\Users\Ivan>arp -s 10.54.167.158 e2-ea-c4-9c-df-3b
+
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  10.54.167.158         e2-ea-c4-9c-df-3b     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+
+
+
+
+7.	Выполнить ping добавленного в предыдущем пункте сетевого адреса 
+C:\Users\Ivan>ping 10.54.167.158
+
+Pinging 10.54.167.158 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 10.54.167.158:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+
+
+
+8.	Добавить в таблицу преобразований следующие записи 
+	(пары "mac-адрес — ip-адрес"): 
+	o	действительный mac-адрес — недействительный сетевой адрес; 
+	o	недействительный mac-адрес — действительный сетевой адрес; 
+8а) MAC адрес норм, а IP не тот
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  10.54.19.219          92-f3-30-cc-dc-77     dynamic
+  10.54.165.83          1c-79-2d-3c-6d-50     dynamic
+  10.54.204.178         0e-d8-80-4f-f6-5c     dynamic
+  10.54.249.240         92-f3-30-cc-dc-77     static
+  10.54.255.255         ff-ff-ff-ff-ff-ff     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+
+C:\Users\Ivan>ping 10.54.249.240
+
+Pinging 10.54.249.240 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 10.54.249.240:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+8б)
+C:\Users\Ivan>arp -s 10.54.250.250 11-22-33-44-55-66
+
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  10.54.165.83          1c-79-2d-3c-6d-50     dynamic
+  10.54.167.158         e2-ea-c4-9c-df-3b     dynamic
+  10.54.204.178         0e-d8-80-4f-f6-5c     dynamic
+  10.54.250.250         11-22-33-44-55-66     static
+  10.54.255.255         ff-ff-ff-ff-ff-ff     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+
+C:\Users\Ivan>ping  10.54.250.250
+
+Pinging 10.54.250.250 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 10.54.250.250:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)
+
+
+
+
+
+11.	Перезагрузить компьютер и снова просмотреть кэш arp. 
+	Сравнить с результатами задания 9. 
+	Что стало с записями, добавленными вами в заданиях 5 и 7? 
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  224.0.0.22            01-00-5e-00-00-16     static
+
+
+
+
+
+12.	Добавить в файл hosts 
+ДО И ПОСЛЕ ДОБАВЛЕНИЯ IP
+C:\Users\Ivan>ping intelmed.org
+
+Pinging intelmed.org [104.21.61.127] with 32 bytes of data:
+Reply from 104.21.61.127: bytes=32 time=12ms TTL=54
+Reply from 104.21.61.127: bytes=32 time=14ms TTL=54
+Reply from 104.21.61.127: bytes=32 time=14ms TTL=54
+Reply from 104.21.61.127: bytes=32 time=18ms TTL=54
+
+Ping statistics for 104.21.61.127:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 12ms, Maximum = 18ms, Average = 14ms
+
+
+
+
+
+13.	Выполнить ping узла intelmed.org
+C:\Users\Ivan>ping intelmed.org
+
+Pinging intelmed.org [81.177.141.71] with 32 bytes of data:
+Reply from 81.177.141.71: bytes=32 time=15ms TTL=57
+Reply from 81.177.141.71: bytes=32 time=14ms TTL=57
+Reply from 81.177.141.71: bytes=32 time=14ms TTL=57
+Reply from 81.177.141.71: bytes=32 time=16ms TTL=57
+
+Ping statistics for 81.177.141.71:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 14ms, Maximum = 16ms, Average = 14ms
+
+
+
+
+14.	Определить по таблице arp mac-адрес узла intelmed.org.
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+
+
+
+
+15.	Определить все ip-адреса (публичные) одного из указанных
+	сервисов: mail.ru, ya.ru, google.com или подобного. 
+C:\Users\Ivan>nslookup google.com
+Server:  edugw01.misis.ru
+Address:  10.54.0.1
+
+Non-authoritative answer:
+Name:    forcesafesearch.google.com
+Address:  216.239.38.120
+Aliases:  google.com
+
+
+C:\Users\Ivan>nslookup yandex.ru
+Server:  edugw01.misis.ru
+Address:  10.54.0.1
+
+Non-authoritative answer:
+Name:    yandex.ru
+Address:  213.180.193.56
+
+
+
+
+
+
+16.	Определите имя и ip-адрес первичного DNS-сервера зоны ru. 
+БЕЗ ВПНа
+C:\Users\Ivan>nslookup
+Default Server:  edugw01.misis.ru
+Address:  10.54.0.1
+
+> set type=ns
+> ru.
+Server:  edugw01.misis.ru
+Address:  10.54.0.1
+
+Non-authoritative answer:
+ru      canonical name = safe2.yandex.ru
+
+yandex.ru
+        primary name server = ns1.yandex.ru
+        responsible mail addr = sysadmin.yandex-team.ru
+        serial  = 2023037771
+        refresh = 600 (10 mins)
+        retry   = 300 (5 mins)
+        expire  = 2592000 (30 days)
+        default TTL = 900 (15 mins)
+
+
+С ВПНом
+C:\Users\Ivan>nslookup
+Default Server:  UnKnown
+Address:  10.20.0.2
+
+> set type=ns
+> ru.
+Server:  UnKnown
+Address:  10.20.0.2
+
+Non-authoritative answer:
+ru      nameserver = a.dns.ripn.net
+ru      nameserver = b.dns.ripn.net
+ru      nameserver = d.dns.ripn.net
+ru      nameserver = e.dns.ripn.net
+ru      nameserver = f.dns.ripn.net
+> exit
+
+C:\Users\Ivan>nslookup -type=ns ru. 8.8.8.8
+Server:  UnKnown
+Address:  8.8.8.8
+
+Non-authoritative answer:
+ru      nameserver = a.dns.ripn.net
+ru      nameserver = b.dns.ripn.net
+ru      nameserver = d.dns.ripn.net
+ru      nameserver = e.dns.ripn.net
+ru      nameserver = f.dns.ripn.net
+
+C:\Users\Ivan>nslookup -type=ns ru. 1.1.1.1
+Server:  UnKnown
+Address:  1.1.1.1
+
+Non-authoritative answer:
+ru      nameserver = a.dns.ripn.net
+ru      nameserver = b.dns.ripn.net
+ru      nameserver = d.dns.ripn.net
+ru      nameserver = e.dns.ripn.net
+ru      nameserver = f.dns.ripn.net
+
+C:\Users\Ivan>nslookup a.dns.ripn.net 8.8.8.8
+Server:  UnKnown
+Address:  8.8.8.8
+
+Name:    a.dns.ripn.net
+Address:  198.20.0.8
+
+
+
+
+
+
+17.	Выполнить arp, arp –a  и др. по параметрам команды
+C:\Users\Ivan>arp
+
+Displays and modifies the IP-to-Physical address translation tables used by
+address resolution protocol (ARP).
+
+ARP -s inet_addr eth_addr [if_addr]
+ARP -d inet_addr [if_addr]
+ARP -a [inet_addr] [-N if_addr] [-v]
+
+  -a            Displays current ARP entries by interrogating the current
+                protocol data.  If inet_addr is specified, the IP and Physical
+                addresses for only the specified computer are displayed.  If
+                more than one network interface uses ARP, entries for each ARP
+                table are displayed.
+  -g            Same as -a.
+  -v            Displays current ARP entries in verbose mode.  All invalid
+                entries and entries on the loop-back interface will be shown.
+  inet_addr     Specifies an internet address.
+  -N if_addr    Displays the ARP entries for the network interface specified
+                by if_addr.
+  -d            Deletes the host specified by inet_addr. inet_addr may be
+                wildcarded with * to delete all hosts.
+  -s            Adds the host and associates the Internet address inet_addr
+                with the Physical address eth_addr.  The Physical address is
+                given as 6 hexadecimal bytes separated by hyphens. The entry
+                is permanent.
+  eth_addr      Specifies a physical address.
+  if_addr       If present, this specifies the Internet address of the
+                interface whose address translation table should be modified.
+                If not present, the first applicable interface will be used.
+Example:
+  > arp -s 157.55.85.212   00-aa-00-62-c6-09  .... Adds a static entry.
+  > arp -a                                    .... Displays the arp table.
+
+C:\Users\Ivan>arp -a
+
+Interface: 10.54.146.129 --- 0xa
+  Internet Address      Physical Address      Type
+  10.54.0.1             00-50-56-98-c7-8e     dynamic
+  10.54.167.158         e6-fa-c4-0c-df-3a     dynamic
+  10.54.204.178         0e-d8-80-4f-f6-5c     dynamic
+  10.54.255.255         ff-ff-ff-ff-ff-ff     static
+  224.0.0.2             01-00-5e-00-00-02     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+C:\Users\Ivan>arp -?
+
+Displays and modifies the IP-to-Physical address translation tables used by
+address resolution protocol (ARP).
+
+ARP -s inet_addr eth_addr [if_addr]
+ARP -d inet_addr [if_addr]
+ARP -a [inet_addr] [-N if_addr] [-v]
+
+  -a            Displays current ARP entries by interrogating the current
+                protocol data.  If inet_addr is specified, the IP and Physical
+                addresses for only the specified computer are displayed.  If
+                more than one network interface uses ARP, entries for each ARP
+                table are displayed.
+  -g            Same as -a.
+  -v            Displays current ARP entries in verbose mode.  All invalid
+                entries and entries on the loop-back interface will be shown.
+  inet_addr     Specifies an internet address.
+  -N if_addr    Displays the ARP entries for the network interface specified
+                by if_addr.
+  -d            Deletes the host specified by inet_addr. inet_addr may be
+                wildcarded with * to delete all hosts.
+  -s            Adds the host and associates the Internet address inet_addr
+                with the Physical address eth_addr.  The Physical address is
+                given as 6 hexadecimal bytes separated by hyphens. The entry
+                is permanent.
+  eth_addr      Specifies a physical address.
+  if_addr       If present, this specifies the Internet address of the
+                interface whose address translation table should be modified.
+                If not present, the first applicable interface will be used.
+Example:
+  > arp -s 157.55.85.212   00-aa-00-62-c6-09  .... Adds a static entry.
+  > arp -a                                    .... Displays the arp table.
+
+
+
+
+
+18.	Выполнить hostname
+C:\Users\Ivan>hostname
+Study_Ivan
+
+
+
+
+19.	 Выполнить nslookup
+C:\Users\Ivan>nslookup
+Default Server:  edugw01.misis.ru
+Address:  10.54.0.1
+
+> nslookup example.com
+Server:  example.com
+Addresses:  2a06:98c1:3122:8000::
+          2a06:98c1:3123:8000::
+          8.47.69.0
+          8.6.112.0
+
+*** example.com can't find nslookup: No response from server
+> exit
+
+C:\Users\Ivan>nslookup example.com
+Server:  edugw01.misis.ru
+Address:  10.54.0.1
+
+Non-authoritative answer:
+Name:    example.com
+Addresses:  2a06:98c1:3123:8000::
+          2a06:98c1:3122:8000::
+          8.6.112.0
+          8.47.69.0
+
+
+
+
+
+20. Выполнить ipconfig, ipconfig ?, ipconfig /all и др. параметрами
+C:\Users\Ivan>ipconfig
+
+Windows IP Configuration
+
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter WiFi:
+
+   Connection-specific DNS Suffix  . : misis.ru
+   IPv4 Address. . . . . . . . . . . : 10.54.146.129
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . : 10.54.0.1
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Users\Ivan>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Study_Ivan
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : misis.ru
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : A4-F9-33-31-30-D6
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : A6-F9-33-31-30-D5
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter WiFi:
+
+   Connection-specific DNS Suffix  . : misis.ru
+   Description . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX201 160MHz
+   Physical Address. . . . . . . . . : B6-6F-07-78-0D-EC
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 10.54.146.129(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Lease Obtained. . . . . . . . . . : Thursday, February 19, 2026 12:24:52 PM
+   Lease Expires . . . . . . . . . . : Thursday, February 19, 2026 2:24:52 PM
+   Default Gateway . . . . . . . . . : 10.54.0.1
+   DHCP Server . . . . . . . . . . . : 10.54.0.1
+   DNS Servers . . . . . . . . . . . : 10.54.0.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : A4-F9-33-31-30-D9
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+C:\Users\Ivan>ipconfig /?
+
+USAGE:
+    ipconfig [/allcompartments] [/? | /all |
+                                 /renew [adapter] | /release [adapter] |
+                                 /renew6 [adapter] | /release6 [adapter] |
+                                 /flushdns | /displaydns | /registerdns |
+                                 /showclassid adapter |
+                                 /setclassid adapter [classid] |
+                                 /showclassid6 adapter |
+                                 /setclassid6 adapter [classid] ]
+
+where
+    adapter             Connection name
+                       (wildcard characters * and ? allowed, see examples)
+
+    Options:
+       /?               Display this help message
+       /all             Display full configuration information.
+       /release         Release the IPv4 address for the specified adapter.
+       /release6        Release the IPv6 address for the specified adapter.
+       /renew           Renew the IPv4 address for the specified adapter.
+       /renew6          Renew the IPv6 address for the specified adapter.
+       /flushdns        Purges the DNS Resolver cache.
+       /registerdns     Refreshes all DHCP leases and re-registers DNS names
+       /displaydns      Display the contents of the DNS Resolver Cache.
+       /showclassid     Displays all the dhcp class IDs allowed for adapter.
+       /setclassid      Modifies the dhcp class id.
+       /showclassid6    Displays all the IPv6 DHCP class IDs allowed for adapter.
+       /setclassid6     Modifies the IPv6 DHCP class id.
+
+
+The default is to display only the IP address, subnet mask and
+default gateway for each adapter bound to TCP/IP.
+
+For Release and Renew, if no adapter name is specified, then the IP address
+leases for all adapters bound to TCP/IP will be released or renewed.
+
+For Setclassid and Setclassid6, if no ClassId is specified, then the ClassId is removed.
+
+Examples:
+    > ipconfig                       ... Show information
+    > ipconfig /all                  ... Show detailed information
+    > ipconfig /renew                ... renew all adapters
+    > ipconfig /renew EL*            ... renew any connection that has its
+                                         name starting with EL
+    > ipconfig /release *Con*        ... release all matching connections,
+                                         eg. "Wired Ethernet Connection 1" or
+                                             "Wired Ethernet Connection 2"
+    > ipconfig /allcompartments      ... Show information about all
+                                         compartments
+    > ipconfig /allcompartments /all ... Show detailed information about all
+                                         compartments
