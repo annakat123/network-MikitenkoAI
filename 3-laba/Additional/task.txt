@@ -1,0 +1,127 @@
+## Цель дополнительного задания
+Настроить коммутаторы для работы в локальной сети: создать VLAN, назначить порты ПК в
+соответствующие VLAN, настроить транковые соединения между коммутаторами для передачи нескольких
+VLAN, задать IP-адреса управления на коммутаторах (SVI) и проверить связь между узлами внутри одной
+VLAN.
+
+## Задачи, которые были поставлены
+1) Создать VLAN 10, VLAN 20, VLAN 30 на коммутаторах.
+2) Настроить access-порты для ПК: PC4–PC6 в VLAN10, PC7–PC9 в VLAN20.
+3) Настроить trunk-порты между коммутаторами для передачи VLAN 10/20/30.
+4) Назначить IP-адреса управления коммутаторам через интерфейс VLAN10 и поднять интерфейс командой
+"no shutdown".
+5) Назначить IP-адреса на ПК и выполнить проверку связи командой "ping" внутри VLAN10 и внутри
+VLAN20.
+6) Подтвердить корректность VLAN и trunk конфигурации командами "show vlan brief" и "show interfaces
+trunk".
+
+## Ход выполнения и применённые команды
+### 1) Создание VLAN на коммутаторах
+На каждом коммутаторе были созданы VLAN 10/20/30 и заданы имена: "VLAN10_USERS", "VLAN20_USERS",
+"VLAN30_USERS". Для сохранения конфигурации использовалась команда "write memory".
+
+Пример команд:
+enable
+configure terminal
+vlan 10
+name VLAN10_USERS
+exit
+vlan 20
+name VLAN20_USERS
+exit
+vlan 30
+name VLAN30_USERS
+exit
+end
+write memory
+
+### 2) Настройка access-портов для ПК
+На Switch1 порты FastEthernet0/1–0/3 переведены в режим access и назначены в VLAN10. Дополнительно
+включён "spanning-tree portfast" для ускорения перехода порта в рабочее состояние при подключении
+конечного устройства.
+
+Команды Switch1:
+int range fa0/1 - 3
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+
+На Switch2 порты FastEthernet0/1, FastEthernet1/1, FastEthernet2/1 настроены как access и назначены
+в VLAN20.
+
+Команды Switch2:
+int fa0/1
+switchport mode access
+switchport access vlan 20
+spanning-tree portfast
+exit
+int fa1/1
+switchport mode access
+switchport access vlan 20
+spanning-tree portfast
+exit
+int fa2/1
+switchport mode access
+switchport access vlan 20
+spanning-tree portfast
+
+### 3) Настройка trunk-портов между коммутаторами
+Для прохождения VLAN 10/20/30 по межкоммутаторным соединениям были настроены trunk-порты с
+разрешённым списком VLAN "10,20,30".
+
+Switch4:
+int gi0/2
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30
+
+Switch3:
+int gi3/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30
+exit
+int gi5/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30
+
+Switch2:
+int gi5/1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30
+
+Примечание по логу: на Switch4 была опечатка "wr'", из-за чего устройство пыталось выполнить DNS-
+резолв строки. Конфигурация trunk при этом уже была применена, а сохранение можно повторить
+корректной командой "wr" или "write memory".
+
+### 4) Назначение IP-адресов управления на коммутаторах (SVI VLAN10)
+Для выполнения требования "задать IP-адрес коммутатора" настроены интерфейсы "interface vlan 10" на
+каждом коммутаторе и включены командой "no shutdown".
+
+Назначения:
+Switch1: 192.168.10.2/24
+Switch2: 192.168.10.3/24
+Switch3: 192.168.10.4/24
+Switch4: 192.168.10.5/24
+
+### 5) Проверка связности внутри VLAN
+Были назначены IP-адреса на ПК и выполнены проверки командой "ping".
+
+Проверка VLAN10: успешные ответы при ping от узла VLAN10 на адреса 192.168.10.12 и 192.168.10.13,
+потерь 0%.
+Проверка VLAN20: успешные ответы при ping на адреса 192.168.20.12 и 192.168.20.13, потерь 0%.
+
+### 6) Подтверждение конфигурации VLAN и trunk
+На Switch3 выполнена команда "show interfaces trunk". В выводе видно, что порты "Gig3/1" и "Gig5/1"
+находятся в состоянии trunking по 802.1Q, а список разрешённых VLAN включает 10, 20, 30.
+
+На Switch3 и Switch2 выполнена команда "show vlan brief". На Switch2 видно, что VLAN20 содержит
+access-порты "Fa0/1, Fa1/1, Fa2/1", что соответствует назначению ПК PC7–PC9 в VLAN20.
+
+Также на Switch2 команда "show interfaces trunk" подтверждает trunking на "Gig5/1" и разрешение VLAN
+10/20/30.
+
+## Результат
+В рамках дополнительного задания выполнена настройка коммутаторов под работу в локальной сети: VLAN
+созданы, access-порты назначены в VLAN10 и VLAN20, trunk-соединения настроены для передачи VLAN
+10/20/30, IP-адреса управления коммутаторов настроены через SVI VLAN10, проверка "ping" внутри
+VLAN10 и VLAN20 показала устойчивую связь без потерь. Конфигурация подтверждена командами "show vlan
+brief" и "show interfaces trunk".

@@ -1,0 +1,25 @@
+Press RETURN to get started!
+
+
+
+East>show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES NVRAM  administratively down down 
+GigabitEthernet0/1     unassigned      YES NVRAM  administratively down down 
+Serial0/0/0            unassigned      YES unset  down                  down 
+Serial0/0/1            unassigned      YES unset  down                  down 
+FastEthernet0/1/0      unassigned      YES unset  down                  down 
+FastEthernet0/1/1      unassigned      YES unset  down                  down 
+FastEthernet0/1/2      unassigned      YES unset  down                  down 
+FastEthernet0/1/3      unassigned      YES unset  down                  down 
+Vlan1                  unassigned      YES NVRAM  administratively down down
+East>
+
+West>show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES NVRAM  administratively down down 
+GigabitEthernet0/1     unassigned      YES NVRAM  administratively down down 
+Serial0/0/0            unassigned      YES NVRAM  administratively down down 
+Serial0/0/1            unassigned      YES NVRAM  administratively down down 
+Vlan1                  unassigned      YES NVRAM  administratively down down
+West>

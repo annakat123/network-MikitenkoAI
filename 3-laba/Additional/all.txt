@@ -1,0 +1,395 @@
+Создаём VLAN на каждом свитче
+Switch1>
+Switch1>enable 
+Switch1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch1(config)#
+Switch1(config)#vlan 10
+Switch1(config-vlan)#name VLAN10_USERS
+Switch1(config-vlan)#exit
+Switch1(config)#vlan 20
+Switch1(config-vlan)#name VLAN20_USERS
+Switch1(config-vlan)#exit
+Switch1(config)#vlan 30
+Switch1(config-vlan)#name VLAN30_USERS
+Switch1(config-vlan)#exit
+Switch1(config)#end
+Switch1#
+%SYS-5-CONFIG_I: Configured from console by console
+write memory
+Building configuration...
+[OK]
+Switch1#
+
+
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#vlan 10
+Switch(config-vlan)#name VLAN10_USERS
+Switch(config-vlan)#exit
+Switch(config)#vlan 20
+Switch(config-vlan)#name VLAN20_USERS
+Switch(config-vlan)#exit
+Switch(config)#vlan 30
+Switch(config-vlan)#name VLAN30_USERS
+Switch(config-vlan)#exit
+Switch(config)#end
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+write memory
+Building configuration...
+[OK]
+Switch#
+
+
+Switch1
+Настроить access-порты под ПК
+Switch1#enable
+Switch1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch1(config)#int range fa0/1 - 3
+Switch1(config-if-range)#switchport mode access
+Switch1(config-if-range)#switchport access vlan 10
+Switch1(config-if-range)#spanning-tree portfast
+%Warning: portfast should only be enabled on ports connected to a single
+host. Connecting hubs, concentrators, switches, bridges, etc... to this
+interface  when portfast is enabled, can cause temporary bridging loops.
+Use with CAUTION
+
+%Portfast has been configured on FastEthernet0/1 but will only
+have effect when the interface is in a non-trunking mode.
+%Warning: portfast should only be enabled on ports connected to a single
+host. Connecting hubs, concentrators, switches, bridges, etc... to this
+interface  when portfast is enabled, can cause temporary bridging loops.
+Use with CAUTION
+
+%Portfast has been configured on FastEthernet0/2 but will only
+have effect when the interface is in a non-trunking mode.
+%Warning: portfast should only be enabled on ports connected to a single
+host. Connecting hubs, concentrators, switches, bridges, etc... to this
+interface  when portfast is enabled, can cause temporary bridging loops.
+Use with CAUTION
+
+%Portfast has been configured on FastEthernet0/3 but will only
+have effect when the interface is in a non-trunking mode.
+Switch1(config-if-range)#end
+Switch1#wr
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+Switch1#
+
+
+Switch2
+Switch#enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int fa0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#spanning-tree portfast
+%Warning: portfast should only be enabled on ports connected to a single
+host. Connecting hubs, concentrators, switches, bridges, etc... to this
+interface  when portfast is enabled, can cause temporary bridging loops.
+Use with CAUTION
+
+%Portfast has been configured on FastEthernet0/1 but will only
+have effect when the interface is in a non-trunking mode.
+Switch(config-if)#exit
+Switch(config)#int fa1/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#spanning-tree portfast
+%Warning: portfast should only be enabled on ports connected to a single
+host. Connecting hubs, concentrators, switches, bridges, etc... to this
+interface  when portfast is enabled, can cause temporary bridging loops.
+Use with CAUTION
+
+%Portfast has been configured on FastEthernet1/1 but will only
+have effect when the interface is in a non-trunking mode.
+Switch(config-if)#exit
+Switch(config)#int fa2/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#spanning-tree portfast
+%Warning: portfast should only be enabled on ports connected to a single
+host. Connecting hubs, concentrators, switches, bridges, etc... to this
+interface  when portfast is enabled, can cause temporary bridging loops.
+Use with CAUTION
+
+%Portfast has been configured on FastEthernet2/1 but will only
+have effect when the interface is in a non-trunking mode.
+Switch(config-if)#end
+Switch#wr
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+Switch#
+
+
+Настроить trunk-порты между свитчами
+Switch4
+Switch#enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int gi0/2
+Switch(config-if)#switchport mode trunk
+
+Switch(config-if)#switchport trunk allowed vlan 10,20,30
+Switch(config-if)#end
+Switch#wr
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+'
+Translating "wr'"...domain server (255.255.255.255)
+
+
+Switch3
+Switch#enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int gi3/1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk allowed vlan 10,20,30
+Switch(config-if)#exit
+Switch(config)#int gi5/1
+Switch(config-if)#switchport mode trunk
+
+Switch(config-if)#switchport trunk allowed vlan 10,20,30
+Switch(config-if)#end
+Switch#wr
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet5/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet5/1, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+Switch#
+
+
+Switch2 -> Switch3
+Switch#enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#int gi5/1
+Switch(config-if)#switchport mode trunk
+
+Switch(config-if)#switchport trunk allowed vlan 10,20,30
+Switch(config-if)#end
+Switch#wr
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet5/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet5/1, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+Switch#
+Switch#
+
+
+
+B1 IP interface
+Switch1#enable
+Switch1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch1(config)#interface vlan 10
+Switch1(config-if)#ip address 192.168.10.2 255.255.255.0
+Switch1(config-if)#no shutdown
+Switch1(config-if)#end
+Switch1#wr
+%LINK-5-CHANGED: Interface Vlan10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+Switch1#
+
+
+Switch2
+Switch#enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface vlan 10
+Switch(config-if)#ip address 192.168.10.3 255.255.255.0
+Switch(config-if)#no shutdown
+Switch(config-if)#end
+Switch#wr
+%LINK-5-CHANGED: Interface Vlan10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+
+
+Switch3
+Switch#enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface vlan 10
+Switch(config-if)#ip address 192.168.10.4 255.255.255.0
+Switch(config-if)#no shutdown
+Switch(config-if)#end
+Switch#wr
+%LINK-5-CHANGED: Interface Vlan10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+
+
+Switch4
+Switch#enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface vlan 10
+Switch(config-if)#ip address 192.168.10.5 255.255.255.0
+Switch(config-if)#no shutdown
+Switch(config-if)#end
+Switch#wr
+%LINK-5-CHANGED: Interface Vlan10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+
+
+C2 ping
+C:\>ping 192.168.10.12
+
+Pinging 192.168.10.12 with 32 bytes of data:
+
+Reply from 192.168.10.12: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.12: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.12: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.12: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.10.12:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.10.13
+
+Pinging 192.168.10.13 with 32 bytes of data:
+
+Reply from 192.168.10.13: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.13: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.13: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.13: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.10.13:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>
+
+
+
+Pinging 192.168.20.12 with 32 bytes of data:
+
+Reply from 192.168.20.12: bytes=32 time<1ms TTL=128
+Reply from 192.168.20.12: bytes=32 time<1ms TTL=128
+Reply from 192.168.20.12: bytes=32 time<1ms TTL=128
+Reply from 192.168.20.12: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.20.12:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 192.168.20.13
+
+Pinging 192.168.20.13 with 32 bytes of data:
+
+Reply from 192.168.20.13: bytes=32 time<1ms TTL=128
+Reply from 192.168.20.13: bytes=32 time<1ms TTL=128
+Reply from 192.168.20.13: bytes=32 time<1ms TTL=128
+Reply from 192.168.20.13: bytes=32 time=1ms TTL=128
+
+Ping statistics for 192.168.20.13:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+	
+Switch3
+
+Switch>show interfaces trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Gig3/1      on           802.1q         trunking      1
+Gig5/1      on           802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Gig3/1      10,20,30
+Gig5/1      10,20,30
+
+Port        Vlans allowed and active in management domain
+Gig3/1      10,20,30
+Gig5/1      10,20,30
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig3/1      10,20,30
+Gig5/1      10,20,30
+
+Switch>show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa1/1, Fa2/1, Fa4/1
+10   VLAN10_USERS                     active    
+20   VLAN20_USERS                     active    
+30   VLAN30_USERS                     active    
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active    
+Switch>
+
+
+Switch2
+Switch>show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa3/1, Gig4/1
+10   VLAN10_USERS                     active    
+20   VLAN20_USERS                     active    Fa0/1, Fa1/1, Fa2/1
+30   VLAN30_USERS                     active    
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active    
+Switch>show interfaces trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Gig5/1      on           802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Gig5/1      10,20,30
+
+Port        Vlans allowed and active in management domain
+Gig5/1      10,20,30
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig5/1      10,20,30
