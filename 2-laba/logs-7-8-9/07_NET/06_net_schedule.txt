@@ -1,0 +1,4 @@
+C:\Users\Ivan>net stop schedule
+System error 5 has occurred.
+
+Access is denied.

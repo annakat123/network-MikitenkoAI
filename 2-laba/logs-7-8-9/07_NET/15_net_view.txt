@@ -1,0 +1,4 @@
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>net view > "logs\07_NET\15_net_view.txt"
+System error 6118 has occurred.
+
+The list of servers for this workgroup is not currently available

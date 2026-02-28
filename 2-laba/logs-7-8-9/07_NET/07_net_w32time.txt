@@ -1,0 +1,3 @@
+The Windows Time service is starting.
+The Windows Time service was started successfully.
+

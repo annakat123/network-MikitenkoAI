@@ -1,0 +1,11 @@
+The command completed successfully.
+
+New connections will be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+OK           Z:        \\STUDY_IVAN\LR2Share$    Microsoft Windows Network
+The command completed successfully.
+

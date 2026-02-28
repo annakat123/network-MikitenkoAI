@@ -1,0 +1,4 @@
+C:\Users\Ivan>net stop dnscache
+The requested pause, continue, or stop is not valid for this service.
+
+More help is available by typing NET HELPMSG 2191.

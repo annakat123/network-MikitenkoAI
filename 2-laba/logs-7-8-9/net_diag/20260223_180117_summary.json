@@ -1,0 +1,66 @@
+﻿[
+    {
+        "Target":  "ya.ru",
+        "Timestamp":  "2026-02-23T18:01:34",
+        "DnsServer":  "fe80::8ede:f9ff:fee4:d318",
+        "ResolvedIPv4":  "",
+        "PingAvgMs":  11,
+        "PingLossCount":  0,
+        "TracertHops":  11,
+        "TracertStarHops":  0,
+        "Issues":  "DNS: Ð¸Ð¼Ñ Ð½Ðµ Ñ€Ð°Ð·Ñ€ÐµÑˆÐ¸Ð»Ð¾ÑÑŒ",
+        "Files":  {
+                      "nslookup":  "20260223_180117_ya.ru_nslookup.txt",
+                      "tracert":  "20260223_180117_ya.ru_tracert.txt",
+                      "ping":  "20260223_180117_ya.ru_ping.txt"
+                  }
+    },
+    {
+        "Target":  "google.com",
+        "Timestamp":  "2026-02-23T18:01:56",
+        "DnsServer":  "fe80::8ede:f9ff:fee4:d318",
+        "ResolvedIPv4":  "",
+        "PingAvgMs":  60,
+        "PingLossCount":  0,
+        "TracertHops":  18,
+        "TracertStarHops":  1,
+        "Issues":  "DNS: Ð¸Ð¼Ñ Ð½Ðµ Ñ€Ð°Ð·Ñ€ÐµÑˆÐ¸Ð»Ð¾ÑÑŒ",
+        "Files":  {
+                      "nslookup":  "20260223_180117_google.com_nslookup.txt",
+                      "tracert":  "20260223_180117_google.com_tracert.txt",
+                      "ping":  "20260223_180117_google.com_ping.txt"
+                  }
+    },
+    {
+        "Target":  "1.1.1.1",
+        "Timestamp":  "2026-02-23T18:02:10",
+        "DnsServer":  "fe80::8ede:f9ff:fee4:d318",
+        "ResolvedIPv4":  "1.1.1.1",
+        "PingAvgMs":  24,
+        "PingLossCount":  0,
+        "TracertHops":  9,
+        "TracertStarHops":  0,
+        "Issues":  "",
+        "Files":  {
+                      "nslookup":  "20260223_180117_1.1.1.1_nslookup.txt",
+                      "tracert":  "20260223_180117_1.1.1.1_tracert.txt",
+                      "ping":  "20260223_180117_1.1.1.1_ping.txt"
+                  }
+    },
+    {
+        "Target":  "8.8.8.8",
+        "Timestamp":  "2026-02-23T18:02:46",
+        "DnsServer":  "fe80::8ede:f9ff:fee4:d318",
+        "ResolvedIPv4":  "8.8.8.8",
+        "PingAvgMs":  22,
+        "PingLossCount":  0,
+        "TracertHops":  24,
+        "TracertStarHops":  11,
+        "Issues":  "",
+        "Files":  {
+                      "nslookup":  "20260223_180117_8.8.8.8_nslookup.txt",
+                      "tracert":  "20260223_180117_8.8.8.8_tracert.txt",
+                      "ping":  "20260223_180117_8.8.8.8_ping.txt"
+                  }
+    }
+]

@@ -1,0 +1,29 @@
+Это чисто на всё будем блочить
+netsh advfirewall firewall add rule name="Block 62.115.143.0/24 OUT" dir=out action=block remoteip=62.115.143.0/24 profile=any
+
+netsh advfirewall firewall add rule name="Block 62.115.143.0/24 IN" dir=in action=block remoteip=62.115.143.0/24 profile=any
+
+Разблочить
+netsh advfirewall firewall delete rule name="Block 62.115.143.0/24 OUT"
+netsh advfirewall firewall delete rule name="Block 62.115.143.0/24 IN"
+
+Проверяем ip
+Get-NetTCPConnection -State Established |
+  Where-Object { $_.OwningProcess -eq (Get-Process -Name java | Select-Object -First 1).Id } |
+  Format-Table LocalPort,RemoteAddress,RemotePort,OwningProcess -Auto
+
+Тут только на java.exe
+netsh advfirewall firewall add rule name="JAVA block Telia STO hop" dir=out action=block program="C:\Users\Ivan\.cristalix\updates\24-jre-win-64\bin\java.exe" remoteip=62.115.143.24/32 profile=any
+netsh advfirewall firewall add rule name="JAVA block Telia FFM hop" dir=out action=block program="C:\Users\Ivan\.cristalix\updates\24-jre-win-64\bin\java.exe" remoteip=62.115.143.29/32 profile=any
+не сработало, удалим правила
+netsh advfirewall firewall delete rule name="JAVA block Telia STO hop"
+netsh advfirewall firewall delete rule name="JAVA block Telia FFM hop"
+делаю с /24
+netsh advfirewall firewall add rule name="JAVA block Telia STO hop" dir=out action=block program="C:\Users\Ivan\.cristalix\updates\24-jre-win-64\bin\java.exe" remoteip=62.115.143.0/24 profile=any
+netsh advfirewall firewall add rule name="JAVA block Telia FFM hop" dir=out action=block program="C:\Users\Ivan\.cristalix\updates\24-jre-win-64\bin\java.exe" remoteip=62.115.143.0/24 profile=any
+Не сработало
+netsh advfirewall firewall add rule name="JAVA block Telia FFM hop" dir=out action=block program="C:\Users\Ivan\.cristalix\updates\24-jre-win-64\bin\java.exe" remoteip=62.115.0.0/16 profile=any
+
+Добавляем для javaw.exe
+netsh advfirewall firewall add rule name="JAVA W block Telia 62.115.0.0_16 IN"  dir=in  action=block program="C:\Program Files\Java\jdk-17\bin\javaw.exe" remoteip=62.115.0.0/16 profile=any
+netsh advfirewall firewall add rule name="JAVA W block Telia 62.115.0.0_16 OUT" dir=out action=block program="C:\Program Files\Java\jdk-17\bin\javaw.exe" remoteip=62.115.0.0/16 profile=any

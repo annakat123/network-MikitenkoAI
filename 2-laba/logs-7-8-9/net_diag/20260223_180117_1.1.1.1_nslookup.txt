@@ -1,0 +1,5 @@
+﻿Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Name:    one.one.one.one
+Address:  1.1.1.1

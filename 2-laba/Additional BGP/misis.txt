@@ -1,0 +1,248 @@
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\System32> Get-NetTCPConnection -State Established |
+>>   Where-Object { $_.OwningProcess -eq (Get-Process -Name java | Select-Object -First 1).Id } |
+>>   Format-Table LocalPort,RemoteAddress,RemotePort,OwningProcess -Auto
+
+LocalPort RemoteAddress RemotePort OwningProcess
+--------- ------------- ---------- -------------
+    45951 198.20.0.7           443          8676
+    45947 198.20.0.16        25565          8676
+
+
+PS C:\WINDOWS\System32> Get-NetTCPConnection -State Established |
+>>   Where-Object { $_.OwningProcess -eq (Get-Process -Name java | Select-Object -First 1).Id } |
+>>   Format-Table LocalPort,RemoteAddress,RemotePort,OwningProcess -Auto
+
+LocalPort RemoteAddress RemotePort OwningProcess
+--------- ------------- ---------- -------------
+     1386 198.20.0.12          443          8676
+     1384 95.181.159.2       25564          8676
+
+
+PS C:\WINDOWS\System32> tracert -w 350 95.181.159.2
+
+Tracing route to 95.181.159.2 over a maximum of 30 hops
+
+  1    <1 ms    <1 ms    <1 ms  95.181.159.2
+
+Trace complete.
+PS C:\WINDOWS\System32> route print 95.181.159.2
+===========================================================================
+Interface List
+ 35...........................Karing TUN Network Adapter Tunnel
+ 12...a4 f9 33 31 30 d6 ......Microsoft Wi-Fi Direct Virtual Adapter
+ 20...a6 f9 33 31 30 d5 ......Microsoft Wi-Fi Direct Virtual Adapter #2
+ 14...00 50 56 c0 00 01 ......VMware Virtual Ethernet Adapter for VMnet1
+  6...00 50 56 c0 00 08 ......VMware Virtual Ethernet Adapter for VMnet8
+ 11...b6 6f 07 78 0d ec ......Intel(R) Wi-Fi 6 AX201 160MHz
+  9...a4 f9 33 31 30 d9 ......Bluetooth Device (Personal Area Network)
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+  None
+Persistent Routes:
+  None
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+  None
+Persistent Routes:
+  None
+PS C:\WINDOWS\System32> Get-NetRoute -DestinationPrefix 95.181.159.2/32 | Format-List *
+Get-NetRoute : No MSFT_NetRoute objects found with property 'DestinationPrefix' equal to '95.181.159.2/32'.  Verify
+the value of the property and retry.
+At line:1 char:1
++ Get-NetRoute -DestinationPrefix 95.181.159.2/32 | Format-List *
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (95.181.159.2/32:String) [Get-NetRoute], CimJobException
+    + FullyQualifiedErrorId : CmdletizationQuery_NotFound_DestinationPrefix,Get-NetRoute
+
+PS C:\WINDOWS\System32> Get-NetRoute -DestinationPrefix 95.181.159.2 | Format-List *
+Get-NetRoute : No MSFT_NetRoute objects found with property 'DestinationPrefix' equal to '95.181.159.2'.  Verify the
+value of the property and retry.
+At line:1 char:1
++ Get-NetRoute -DestinationPrefix 95.181.159.2 | Format-List *
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (95.181.159.2:String) [Get-NetRoute], CimJobException
+    + FullyQualifiedErrorId : CmdletizationQuery_NotFound_DestinationPrefix,Get-NetRoute
+
+PS C:\WINDOWS\System32> Get-NetIPInterface | Sort-Object InterfaceMetric | Select-Object ifIndex,InterfaceAlias,AddressFamily,InterfaceMetric,NlMtu
+
+
+ifIndex         : 35
+InterfaceAlias  : Karing TUN Network Adapter
+AddressFamily   : IPv4
+InterfaceMetric :
+NlMtu           : 1500
+
+ifIndex         : 35
+InterfaceAlias  : Karing TUN Network Adapter
+AddressFamily   : IPv6
+InterfaceMetric : 5
+NlMtu           : 65535
+
+ifIndex         : 12
+InterfaceAlias  : Local Area Connection* 9
+AddressFamily   : IPv6
+InterfaceMetric : 25
+NlMtu           : 1500
+
+ifIndex         : 20
+InterfaceAlias  : Local Area Connection* 10
+AddressFamily   : IPv6
+InterfaceMetric : 25
+NlMtu           : 1500
+
+ifIndex         : 12
+InterfaceAlias  : Local Area Connection* 9
+AddressFamily   : IPv4
+InterfaceMetric : 25
+NlMtu           : 1500
+
+ifIndex         : 20
+InterfaceAlias  : Local Area Connection* 10
+AddressFamily   : IPv4
+InterfaceMetric : 25
+NlMtu           : 1500
+
+ifIndex         : 14
+InterfaceAlias  : VMware Network Adapter VMnet1
+AddressFamily   : IPv4
+InterfaceMetric : 35
+NlMtu           : 1500
+
+ifIndex         : 6
+InterfaceAlias  : VMware Network Adapter VMnet8
+AddressFamily   : IPv4
+InterfaceMetric : 35
+NlMtu           : 1500
+
+ifIndex         : 6
+InterfaceAlias  : VMware Network Adapter VMnet8
+AddressFamily   : IPv6
+InterfaceMetric : 35
+NlMtu           : 1500
+
+ifIndex         : 14
+InterfaceAlias  : VMware Network Adapter VMnet1
+AddressFamily   : IPv6
+InterfaceMetric : 35
+NlMtu           : 1500
+
+ifIndex         : 11
+InterfaceAlias  : WiFi
+AddressFamily   : IPv4
+InterfaceMetric : 45
+NlMtu           : 1500
+
+ifIndex         : 9
+InterfaceAlias  : Bluetooth Network Connection
+AddressFamily   : IPv6
+InterfaceMetric : 65
+NlMtu           : 1500
+
+ifIndex         : 9
+InterfaceAlias  : Bluetooth Network Connection
+AddressFamily   : IPv4
+InterfaceMetric : 65
+NlMtu           : 1500
+
+ifIndex         : 1
+InterfaceAlias  : Loopback Pseudo-Interface 1
+AddressFamily   : IPv4
+InterfaceMetric : 75
+NlMtu           : 4294967295
+
+ifIndex         : 1
+InterfaceAlias  : Loopback Pseudo-Interface 1
+AddressFamily   : IPv6
+InterfaceMetric : 75
+NlMtu           : 4294967295
+
+
+
+PS C:\WINDOWS\System32> tracert -w 350 95.181.159.2
+
+Tracing route to 95.181.159.2 over a maximum of 30 hops
+
+  1     7 ms     4 ms     4 ms  edugw01.misis.ru [10.54.0.1]
+  2    11 ms     5 ms     9 ms  85.143.106.126
+  3    31 ms     2 ms     3 ms  415.ae0.gw5.tv11.msk.niks.su [194.190.254.85]
+  4     4 ms     2 ms     4 ms  et011.r1.m9.msk.niks.su [194.85.42.66]
+  5    33 ms    12 ms    42 ms  et011.r1.kt12.spb.niks.su [194.85.43.129]
+  6    19 ms    34 ms    24 ms  et014.r1.bm18.spb.niks.su [194.85.42.128]
+  7   152 ms    54 ms    65 ms  as16276.ix.dataix.eu [178.18.224.252]
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10    60 ms    54 ms    86 ms  fra-fr5-sbb1-nc5.de.eu [57.128.121.50]
+ 11    79 ms    72 ms    60 ms  be105.lil2-gra1-sbb1-nc5.fr.eu [213.186.32.212]
+ 12    74 ms   111 ms    57 ms  37.59.16.28
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *
+PS C:\WINDOWS\System32> tracert -w 350 95.181.159.2
+
+Tracing route to 95.181.159.2 over a maximum of 30 hops
+
+  1     3 ms     2 ms     *     edugw01.misis.ru [10.54.0.1]
+  2     5 ms     2 ms     6 ms  85.143.106.126
+  3    11 ms     8 ms     8 ms  415.ae0.gw5.tv11.msk.niks.su [194.190.254.85]
+  4     6 ms     3 ms     6 ms  et011.r1.m9.msk.niks.su [194.85.42.66]
+  5    22 ms    19 ms    17 ms  et011.r1.kt12.spb.niks.su [194.85.43.129]
+  6    13 ms    13 ms    11 ms  et014.r1.bm18.spb.niks.su [194.85.42.128]
+  7    56 ms    50 ms    48 ms  as16276.ix.dataix.eu [178.18.224.252]
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10    48 ms    47 ms    49 ms  fra-fr5-sbb1-nc5.de.eu [57.128.121.50]
+ 11    58 ms    61 ms    58 ms  be105.lil2-gra1-sbb1-nc5.fr.eu [213.186.32.212]
+ 12    61 ms    56 ms    58 ms  37.59.16.28
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17
+PS C:\WINDOWS\System32> tracert -w 350 95.181.159.2
+
+Tracing route to 95.181.159.2 over a maximum of 30 hops
+
+  1    25 ms    16 ms    10 ms  edugw01.misis.ru [10.54.0.1]
+  2     5 ms     1 ms     2 ms  85.143.106.126
+  3     8 ms     8 ms     4 ms  415.ae0.gw5.tv11.msk.niks.su [194.190.254.85]
+  4     9 ms    10 ms     7 ms  et011.r1.m9.msk.niks.su [194.85.42.66]
+  5    48 ms    18 ms    11 ms  et011.r1.kt12.spb.niks.su [194.85.43.129]
+  6    12 ms    11 ms    11 ms  et014.r1.bm18.spb.niks.su [194.85.42.128]
+  7    55 ms    52 ms    49 ms  as16276.ix.dataix.eu [178.18.224.252]
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10    52 ms    47 ms    47 ms  fra-fr5-sbb1-nc5.de.eu [57.128.121.50]
+ 11    64 ms    58 ms    56 ms  be105.lil2-gra1-sbb1-nc5.fr.eu [213.186.32.212]
+ 12    64 ms    67 ms    58 ms  37.59.16.28
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *
+PS C:\WINDOWS\System32>

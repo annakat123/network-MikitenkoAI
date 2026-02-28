@@ -1,0 +1,521 @@
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 142.250.72.206
+
+Tracing route to ncdena-ab-in-f14.1e100.net [142.250.72.206]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     6 ms     2 ms     2 ms  10.200.40.10
+  5     6 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     6 ms     3 ms     3 ms  72.14.215.165
+  7    15 ms     *       16 ms  188x234x131x225.ertelecom.ru [188.234.131.225]
+  8    16 ms    16 ms    16 ms  216.239.49.19
+  9    17 ms    18 ms    17 ms  192.178.241.234
+ 10    31 ms    31 ms    32 ms  142.250.238.14
+ 11    42 ms    40 ms    39 ms  216.239.63.63
+ 12   119 ms   122 ms   122 ms  192.178.80.59
+ 13   135 ms   134 ms   135 ms  192.178.81.233
+ 14   145 ms   144 ms   145 ms  192.178.255.14
+ 15   145 ms   146 ms   143 ms  172.253.70.31
+ 16   154 ms   153 ms   154 ms  142.251.237.111
+ 17   154 ms   160 ms   153 ms  172.253.51.121
+ 18   154 ms   154 ms   153 ms  192.178.97.21
+ 19   154 ms   153 ms   153 ms  142.251.51.155
+ 20   153 ms   153 ms   151 ms  ncdena-ab-in-f14.1e100.net [142.250.72.206]
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -d -h 60 -w 350 142.250.72.206
+
+Tracing route to 142.250.72.206 over a maximum of 60 hops
+
+  1     1 ms     1 ms     1 ms  192.168.31.1
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     5 ms     2 ms     2 ms  10.200.40.10
+  5     6 ms     2 ms     3 ms  176.213.132.18
+  6     6 ms     3 ms     2 ms  72.14.215.165
+  7    16 ms    16 ms    16 ms  188.234.131.225
+  8    16 ms    15 ms     *     216.239.49.19
+  9    17 ms    16 ms    16 ms  192.178.241.234
+ 10     *       30 ms    31 ms  142.250.238.14
+ 11    41 ms    41 ms    41 ms  216.239.63.63
+ 12   120 ms   121 ms   121 ms  192.178.80.59
+ 13     *      134 ms   131 ms  192.178.81.233
+ 14   144 ms   143 ms     *     192.178.255.14
+ 15   144 ms   145 ms   145 ms  172.253.70.31
+ 16   153 ms     *      151 ms  142.251.237.111
+ 17   174 ms   153 ms     *     172.253.51.121
+ 18   154 ms   153 ms   153 ms  192.178.97.21
+ 19   152 ms     *      153 ms  142.251.51.155
+ 20   152 ms   152 ms   152 ms  142.250.72.206
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -h 60 -w 350 142.250.72.206
+
+Tracing route to ncdena-ab-in-f14.1e100.net [142.250.72.206]
+over a maximum of 60 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     6 ms     3 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     5 ms     3 ms     3 ms  10.200.40.10
+  5     5 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     6 ms     3 ms     3 ms  72.14.215.165
+  7    17 ms     *       17 ms  188x234x131x225.ertelecom.ru [188.234.131.225]
+  8    17 ms    17 ms     *     216.239.49.19
+  9    17 ms    16 ms    16 ms  192.178.241.234
+ 10    31 ms    31 ms    31 ms  142.250.238.14
+ 11    38 ms    39 ms     *     216.239.63.63
+ 12   123 ms   120 ms   122 ms  192.178.80.59
+ 13     *      132 ms   135 ms  192.178.81.233
+ 14   145 ms     *      145 ms  192.178.255.14
+ 15   144 ms   146 ms     *     172.253.70.31
+ 16   154 ms   153 ms     *     142.251.237.111
+ 17   153 ms   153 ms     *     172.253.51.121
+ 18   153 ms   154 ms     *     192.178.97.21
+ 19   153 ms   153 ms     *     142.251.51.155
+ 20   150 ms   153 ms     *     ncdena-ab-in-f14.1e100.net [142.250.72.206]
+ 21   153 ms   155 ms   153 ms  ncdena-ab-in-f14.1e100.net [142.250.72.206]
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -6 -h 60 -w 350 142.250.72.206
+Unable to resolve target system name 142.250.72.206.
+
+
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 8.218.56.1
+
+Tracing route to 8.218.56.1 over a maximum of 30 hops
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     3 ms     3 ms  10.200.40.9
+  4     5 ms     3 ms     3 ms  10.200.40.10
+  5     5 ms     3 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     3 ms     3 ms     3 ms  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221]
+  7     *       13 ms    16 ms  ae15-1316.RT.M9.MSK.retn.ru [139.45.224.66]
+  8    46 ms    42 ms    42 ms  ae1-5.rt.irx.fkt.de.retn.net [87.245.232.244]
+  9    45 ms    45 ms    46 ms  xe-5-2-2.a03.frnkge13.de.bb.gin.ntt.net [83.231.214.76]
+ 10    56 ms    54 ms    51 ms  ae-3.r26.frnkge13.de.bb.gin.ntt.net [129.250.4.174]
+ 11    60 ms    63 ms    57 ms  ae-3.r22.vienat02.at.bb.gin.ntt.net [129.250.7.34]
+ 12     *        *      311 ms  ae-9.r28.tkokhk01.hk.bb.gin.ntt.net [129.250.4.80]
+ 13   265 ms   248 ms   235 ms  ae-18.a00.chwahk03.hk.bb.gin.ntt.net [129.250.2.149]
+ 14   271 ms   270 ms   273 ms  203.131.242.186
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *      269 ms     *     26.25.157.1
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *        *        *     Request timed out.
+ 28     *        *        *     Request timed out.
+ 29     *        *        *     Request timed out.
+ 30     *        *        *     Request timed out.
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -h 100 -w 500 8.218.56.1
+
+Tracing route to 8.218.56.1 over a maximum of 100 hops
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     6 ms     3 ms     2 ms  172.19.63.252
+  3     4 ms     2 ms     2 ms  10.200.40.9
+  4     2 ms     2 ms     2 ms  10.200.40.10
+  5     3 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6    15 ms     5 ms     5 ms  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221]
+  7     *       16 ms    15 ms  ae15-1316.RT.M9.MSK.retn.ru [139.45.224.66]
+  8    42 ms    42 ms    42 ms  ae1-5.rt.irx.fkt.de.retn.net [87.245.232.244]
+  9    43 ms    43 ms    43 ms  xe-5-2-2.a03.frnkge13.de.bb.gin.ntt.net [83.231.214.76]
+ 10    46 ms    46 ms    45 ms  ae-3.r26.frnkge13.de.bb.gin.ntt.net [129.250.4.174]
+ 11    57 ms    56 ms     *     ae-3.r22.vienat02.at.bb.gin.ntt.net [129.250.7.34]
+ 12     *        *        *     Request timed out.
+ 13   361 ms     *      373 ms  ae-18.a00.chwahk03.hk.bb.gin.ntt.net [129.250.2.149]
+ 14   301 ms     *      303 ms  203.131.242.186
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *        *        *     Request timed out.
+ 28     *        *        *     Request timed out.
+ 29     *        *        *     Request timed out.
+ 30     *        *        *     Request timed out.
+ 31     *        *        *     Request timed out.
+ 32     *        *        *     Request timed out.
+ 33     *        *        *     Request timed out.
+ 34     *        *        *     Request timed out.
+ 35     *        *        *     Request timed out.
+ 36     *        *        *     Request timed out.
+ 37     *        *        *     Request timed out.
+ 38     *        *        *     Request timed out.
+ 39     *        *        *     Request timed out.
+ 40     *        *        *     Request timed out.
+ 41     *        *        *     Request timed out.
+ 42     *        *        *     Request timed out.
+ 43     *        *        *     Request timed out.
+ 44     *        *        *     Request timed out.
+ 45     *        *        *     Request timed out.
+ 46     *        *        *     Request timed out.
+ 47     *        *        *     Request timed out.
+ 48     *        *        *     Request timed out.
+ 49     *        *        *     Request timed out.
+ 50     *        *        *     Request timed out.
+ 51     *        *        *     Request timed out.
+ 52     *        *        *     Request timed out.
+ 53     *        *        *     Request timed out.
+ 54     *        *        *     Request timed out.
+ 55     *        *        *     Request timed out.
+ 56     *        *        *     Request timed out.
+ 57     *        *        *     Request timed out.
+ 58     *        *        *     Request timed out.
+ 59     *        *        *     Request timed out.
+ 60     *        *        *     Request timed out.
+ 61     *        *        *     Request timed out.
+ 62     *        *        *     Request timed out.
+ 63     *        *        *     Request timed out.
+ 64     *        *        *     Request timed out.
+ 65     *        *        *     Request timed out.
+ 66     *        *        *     Request timed out.
+ 67     *        *        *     Request timed out.
+ 68     *        *        *     Request timed out.
+ 69     *        *        *     Request timed out.
+ 70     *        *        *     Request timed out.
+ 71     *        *        *     Request timed out.
+ 72     *        *        *     Request timed out.
+ 73     *        *        *     Request timed out.
+ 74     *        *        *     Request timed out.
+ 75     *        *        *     Request timed out.
+ 76     *        *        *     Request timed out.
+ 77     *        *        *     Request timed out.
+ 78     *        *        *     Request timed out.
+ 79     *        *        *     Request timed out.
+ 80     *        *        *     Request timed out.
+ 81     *        *        *     Request timed out.
+ 82     *        *        *     Request timed out.
+ 83     *        *        *     Request timed out.
+ 84     *        *        *     Request timed out.
+ 85     *        *        *     Request timed out.
+ 86     *        *        *     Request timed out.
+ 87     *        *        *     Request timed out.
+ 88     *        *        *     Request timed out.
+ 89     *        *        *     Request timed out.
+ 90     *        *        *     Request timed out.
+ 91     *        *        *     Request timed out.
+ 92     *        *        *     Request timed out.
+ 93     *        *        *     Request timed out.
+ 94     *        *        *     Request timed out.
+ 95     *        *        *     Request timed out.
+ 96     *        *        *     Request timed out.
+ 97     *        *        *     Request timed out.
+ 98     *        *        *     Request timed out.
+ 99     *        *        *     Request timed out.
+100     *        *        *     Request timed out.
+
+Trace complete.
+
+Еще раз протестил
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -h 250 -w 350 8.218.56.1
+
+Tracing route to 8.218.56.1 over a maximum of 250 hops
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     6 ms     2 ms     2 ms  172.19.63.252
+  3     6 ms     2 ms     2 ms  10.200.40.9
+  4     4 ms     2 ms     2 ms  10.200.40.10
+  5     6 ms     2 ms     3 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     6 ms     3 ms     3 ms  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221]
+  7    15 ms    13 ms    16 ms  ae15-1316.RT.M9.MSK.retn.ru [139.45.224.66]
+  8     *       43 ms    41 ms  ae1-5.rt.irx.fkt.de.retn.net [87.245.232.244]
+  9    45 ms    46 ms    44 ms  xe-5-2-2.a03.frnkge13.de.bb.gin.ntt.net [83.231.214.76]
+ 10    42 ms    43 ms    43 ms  ae-3.r26.frnkge13.de.bb.gin.ntt.net [129.250.4.174]
+ 11    57 ms    57 ms    57 ms  ae-3.r22.vienat02.at.bb.gin.ntt.net [129.250.7.34]
+ 12     *        *      478 ms  ae-9.r28.tkokhk01.hk.bb.gin.ntt.net [129.250.4.80]
+ 13   387 ms     *        *     ae-18.a00.chwahk03.hk.bb.gin.ntt.net [129.250.2.149]
+ 14   272 ms     *      270 ms  203.131.242.186
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+(всё равно не пропинговало потом)
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -d -h 60 -w 350 8.218.56.1
+
+Tracing route to 8.218.56.1 over a maximum of 60 hops
+
+  1     1 ms     1 ms     1 ms  192.168.31.1
+  2     5 ms     3 ms     3 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     3 ms     3 ms     3 ms  10.200.40.10
+  5     5 ms     2 ms     2 ms  176.213.132.18
+  6     7 ms     5 ms     3 ms  62.115.145.221
+  7    16 ms    13 ms    15 ms  139.45.224.66
+  8    43 ms    45 ms    45 ms  87.245.232.244
+  9    46 ms    46 ms    46 ms  83.231.214.76
+ 10    46 ms    45 ms     *     129.250.4.174
+ 11    57 ms    57 ms    57 ms  129.250.7.34
+ 12     *        *        *     Request timed out.
+ 13   364 ms     *      342 ms  129.250.2.149
+ 14   299 ms     *      282 ms  203.131.242.186
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+(Тоже дальше смысла нет)
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -6 -h 150 -w 400 8.218.56.1
+Unable to resolve target system name 8.218.56.1.
+
+
+
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 ya.ru
+
+Tracing route to ya.ru [77.88.44.242]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     5 ms     2 ms     2 ms  10.200.40.10
+  5     5 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     5 ms     2 ms     2 ms  188x234x76x65.ertelecom.ru [188.234.76.65]
+  7     8 ms     4 ms     3 ms  169.254.0.115
+  8     9 ms     7 ms     6 ms  10.32.83.1
+  9     9 ms     6 ms     6 ms  10.1.3.1
+ 10     8 ms     5 ms     5 ms  ya.ru [77.88.44.242]
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -d -h 60 -w 350 77.88.44.242
+
+Tracing route to 77.88.44.242 over a maximum of 60 hops
+
+  1     1 ms     1 ms     1 ms  192.168.31.1
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     6 ms     2 ms     2 ms  10.200.40.10
+  5    24 ms    22 ms     5 ms  176.213.132.18
+  6     5 ms     2 ms     2 ms  188.234.76.65
+  7     5 ms     3 ms     3 ms  169.254.0.115
+  8     9 ms     6 ms     5 ms  10.32.83.1
+  9     9 ms     6 ms     6 ms  10.1.3.1
+ 10     8 ms     5 ms     5 ms  77.88.44.242
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -h 60 -w 350 77.88.44.242
+
+Tracing route to ya.ru [77.88.44.242]
+over a maximum of 60 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     6 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     6 ms     2 ms     2 ms  10.200.40.10
+  5     6 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     6 ms     2 ms     2 ms  188x234x76x65.ertelecom.ru [188.234.76.65]
+  7     6 ms     3 ms     3 ms  169.254.0.115
+  8     8 ms     5 ms     5 ms  10.32.83.1
+  9    10 ms     7 ms     7 ms  10.1.3.1
+ 10     7 ms     5 ms     5 ms  ya.ru [77.88.44.242]
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -6 -h 60 -w 350 77.88.44.242
+Unable to resolve target system name 77.88.44.242.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -h 60 -w 400 220.245.143.194
+
+Tracing route to 220-245-143-194.tpgi.com.au [220.245.143.194]
+over a maximum of 60 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     4 ms     2 ms     2 ms  10.200.40.10
+  5     2 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     6 ms     2 ms     2 ms  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221]
+  7     *        *       15 ms  ae15-1316.RT.M9.MSK.retn.ru [139.45.224.66]
+  8    47 ms    43 ms    43 ms  ae0-13.rt.ldc.waw.pl.retn.net [87.245.233.56]
+  9    41 ms    38 ms    40 ms  ix-ae-35-0.tcore1.w1t-warsaw.as6453.net [80.231.124.38]
+ 10     *        *        *     Request timed out.
+ 11     *        *        *     Request timed out.
+ 12     *        *        *     Request timed out.
+ 13   179 ms   176 ms     *     if-bundle-12-2.qcore1.pvu-paris.as6453.net [80.231.245.12]
+ 14   180 ms   181 ms     *     if-bundle-22-2.qcore1.pye-paris.as6453.net [80.231.154.198]
+ 15     *        *      178 ms  63.243.137.148
+ 16     *        *        *     Request timed out.
+ 17   349 ms     *      348 ms  220-245-143-194.tpgi.com.au [220.245.143.194]
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -4 -d -h 60 -w 400 220.245.143.194
+
+Tracing route to 220.245.143.194 over a maximum of 60 hops
+
+  1     1 ms     1 ms     1 ms  192.168.31.1
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     4 ms     2 ms     2 ms  10.200.40.9
+  4     5 ms     2 ms     2 ms  10.200.40.10
+  5     5 ms     2 ms     2 ms  176.213.132.18
+  6     6 ms     2 ms     2 ms  62.115.145.221
+  7    15 ms    12 ms    15 ms  139.45.224.66
+  8    45 ms    42 ms    42 ms  87.245.233.56
+  9    41 ms     *       39 ms  80.231.124.38
+ 10   179 ms     *        *     195.219.69.118
+ 11     *        *        *     Request timed out.
+ 12     *      179 ms     *     80.231.245.40
+ 13   175 ms   179 ms     *     80.231.245.12
+ 14     *        *        *     Request timed out.
+ 15     *        *      178 ms  63.243.137.148
+ 16   177 ms     *        *     207.45.219.136
+ 17   363 ms     *      352 ms  220.245.143.194
+
+Trace complete.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -6 -h 60 -w 400 220.245.143.194
+Unable to resolve target system name 220.245.143.194.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>nslookup 220.245.143.194
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Name:    220-245-143-194.tpgi.com.au
+Address:  220.245.143.194
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -6 -h 60 -w 400 fe80::8ede:f9ff:fee4:d318
+
+Tracing route to fe80::8ede:f9ff:fee4:d318 over a maximum of 60 hops
+
+  1     1 ms     1 ms     1 ms  fe80::8ede:f9ff:fee4:d318
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -6 -h 60 fe80::8ede:f9ff:fee4:d318
+
+Tracing route to fe80::8ede:f9ff:fee4:d318 over a maximum of 60 hops
+
+  1     1 ms     1 ms     1 ms  fe80::8ede:f9ff:fee4:d318
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>tracert -6 -d -h 60 fe80::8ede:f9ff:fee4:d318
+
+Tracing route to fe80::8ede:f9ff:fee4:d318 over a maximum of 60 hops
+
+  1     1 ms     1 ms     1 ms  fe80::8ede:f9ff:fee4:d318
+
+Trace complete.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::c55c:14b7:a879:be50%21
+   IPv4 Address. . . . . . . . . . . : 192.168.31.15
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.31.1
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter WiFi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::9e37:889c:b185:6f0f%14
+   Autoconfiguration IPv4 Address. . : 169.254.209.98
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::ad81:56f4:11b0:d18b%6
+   Autoconfiguration IPv4 Address. . : 169.254.142.113
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   
+   C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>pathping 220.245.143.194
+
+Tracing route to 220-245-143-194.tpgi.com.au [220.245.143.194]
+over a maximum of 30 hops:
+  0  Study_Ivan [192.168.31.15]
+  1  XiaoQiang [192.168.31.1]
+  2  172.19.63.252
+  3  10.200.40.9
+  4  10.200.40.10
+  5  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221]
+  7  ae15-1316.RT.M9.MSK.retn.ru [139.45.224.66]
+  8  ae0-13.rt.ldc.waw.pl.retn.net [87.245.233.56]
+  9  ix-ae-35-0.tcore1.w1t-warsaw.as6453.net [80.231.124.38]
+ 10     *        *     if-bundle-15-2.qcore2.fnm-frankfurt.as6453.net [195.219.69.118]
+ 11     *        *        *
+Computing statistics for 250 seconds...
+            Source to Here   This Node/Link
+Hop  RTT    Lost/Sent = Pct  Lost/Sent = Pct  Address
+  0                                           Study_Ivan [192.168.31.15]
+                                0/ 100 =  0%   |
+  1    1ms     0/ 100 =  0%     0/ 100 =  0%  XiaoQiang [192.168.31.1]
+                                0/ 100 =  0%   |
+  2  ---     100/ 100 =100%   100/ 100 =100%  172.19.63.252
+                                0/ 100 =  0%   |
+  3  ---     100/ 100 =100%   100/ 100 =100%  10.200.40.9
+                                0/ 100 =  0%   |
+  4  ---     100/ 100 =100%   100/ 100 =100%  10.200.40.10
+                                0/ 100 =  0%   |
+  5  ---     100/ 100 =100%   100/ 100 =100%  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+                                0/ 100 =  0%   |
+  6    6ms     0/ 100 =  0%     0/ 100 =  0%  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221]
+                                3/ 100 =  3%   |
+  7   16ms     3/ 100 =  3%     0/ 100 =  0%  ae15-1316.RT.M9.MSK.retn.ru [139.45.224.66]
+                               97/ 100 = 97%   |
+  8  ---     100/ 100 =100%     0/ 100 =  0%  ae0-13.rt.ldc.waw.pl.retn.net [87.245.233.56]
+                                0/ 100 =  0%   |
+  9  ---     100/ 100 =100%     0/ 100 =  0%  ix-ae-35-0.tcore1.w1t-warsaw.as6453.net [80.231.124.38]
+                                0/ 100 =  0%   |
+ 10  ---     100/ 100 =100%     0/ 100 =  0%  if-bundle-15-2.qcore2.fnm-frankfurt.as6453.net [195.219.69.118]
+
+Trace complete.

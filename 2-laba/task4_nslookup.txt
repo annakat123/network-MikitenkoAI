@@ -1,0 +1,259 @@
+C:\Users\Ivan>nslookup
+Default Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+>
+C:\Users\Ivan>nslookup /?
+Usage:
+   nslookup [-opt ...]             # interactive mode using default server
+   nslookup [-opt ...] - server    # interactive mode using 'server'
+   nslookup [-opt ...] host        # just look up 'host' using default server
+   nslookup [-opt ...] host server # just look up 'host' using 'server'
+
+C:\Users\Ivan>nslookup mail.ru
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    mail.ru
+Addresses:  89.221.239.1
+          185.180.201.1
+          90.156.232.4
+
+
+C:\Users\Ivan>nslookup mail.ru
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    mail.ru
+Addresses:  90.156.232.4
+          185.180.201.1
+          89.221.239.1
+
+
+C:\Users\Ivan>nslookup mail.ru
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    mail.ru
+Addresses:  89.221.239.1
+          90.156.232.4
+          185.180.201.1
+
+
+C:\Users\Ivan>nslookup google.ru
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.ru
+Addresses:  2a00:1450:4007:80d::2003
+          142.250.75.227
+
+
+C:\Users\Ivan>nslookup google.ru
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.ru
+Addresses:  2a00:1450:4007:80d::2003
+          142.250.75.227
+
+
+C:\Users\Ivan>nslookup google.ru
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.ru
+Addresses:  2a00:1450:4007:80d::2003
+          142.250.75.227
+
+
+C:\Users\Ivan>nslookup google.com
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2a00:1450:4007:80f::200e
+          172.217.20.46
+
+
+C:\Users\Ivan>nslookup google.com
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2a00:1450:4007:80f::200e
+          172.217.20.46
+
+
+C:\Users\Ivan>nslookup google.com
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2a00:1450:4007:80f::200e
+          172.217.20.46
+
+
+C:\Users\Ivan>nslookup google.ru 1.1.1.1
+Server:  one.one.one.one
+Address:  1.1.1.1
+
+Non-authoritative answer:
+Name:    google.ru
+Addresses:  2a00:1450:4010:c06::5e
+          64.233.163.94
+
+
+C:\Users\Ivan>nslookup google.ru 8.8.8.8
+Server:  dns.google
+Address:  8.8.8.8
+
+Non-authoritative answer:
+Name:    google.ru
+Addresses:  2a00:1450:4010:c07::5e
+          142.250.150.94
+
+
+C:\Users\Ivan>nslookup mail.ru 1.1.1.1
+Server:  one.one.one.one
+Address:  1.1.1.1
+
+Non-authoritative answer:
+Name:    mail.ru
+Addresses:  90.156.232.4
+          185.180.201.1
+          89.221.239.1
+
+
+C:\Users\Ivan>nslookup mail.ru 8.8.8.8
+Server:  dns.google
+Address:  8.8.8.8
+
+Non-authoritative answer:
+Name:    mail.ru
+Addresses:  90.156.232.4
+          185.180.201.1
+          89.221.239.1
+		  
+
+ДЛЯ DNS СЕРВЕРА
+C:\Users\Ivan>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Study_Ivan
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Unknown adapter Karing TUN Network Adapter:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Karing TUN Network Adapter Tunnel
+   Physical Address. . . . . . . . . :
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 10.20.0.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.252
+   Default Gateway . . . . . . . . . : 10.20.0.2
+   DNS Servers . . . . . . . . . . . : 10.20.0.2
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Realtek USB GbE Family Controller
+   Physical Address. . . . . . . . . : 6C-1F-F7-13-42-AD
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::c55c:14b7:a879:be50%21(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.31.15(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Friday, February 20, 2026 5:03:36 PM
+   Lease Expires . . . . . . . . . . : Monday, February 23, 2026 11:40:50 AM
+   Default Gateway . . . . . . . . . : 192.168.31.1
+   DHCP Server . . . . . . . . . . . : 192.168.31.1
+   DHCPv6 IAID . . . . . . . . . . . : 325853175
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-F2-7B-79-6C-1F-F7-13-42-AD
+   DNS Servers . . . . . . . . . . . : fe80::8ede:f9ff:fee4:d318%21
+                                       192.168.31.1
+                                       fe80::8ede:f9ff:fee4:d318%21
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : A4-F9-33-31-30-D6
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : A6-F9-33-31-30-D5
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter WiFi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX201 160MHz
+   Physical Address. . . . . . . . . : 66-1F-E7-42-01-94
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VMware Virtual Ethernet Adapter for VMnet1
+   Physical Address. . . . . . . . . : 00-50-56-C0-00-01
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::9e37:889c:b185:6f0f%14(Preferred)
+   Autoconfiguration IPv4 Address. . : 169.254.209.98(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 553668694
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-F2-7B-79-6C-1F-F7-13-42-AD
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VMware Virtual Ethernet Adapter for VMnet8
+   Physical Address. . . . . . . . . : 00-50-56-C0-00-08
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::ad81:56f4:11b0:d18b%6(Preferred)
+   Autoconfiguration IPv4 Address. . : 169.254.142.113(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 570445910
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-F2-7B-79-6C-1F-F7-13-42-AD
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : A4-F9-33-31-30-D9
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+C:\Users\Ivan>

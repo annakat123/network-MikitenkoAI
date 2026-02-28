@@ -1,0 +1,36 @@
+```
+C:\Windows\System32>tracert -4 -h 60 -w 400 220.245.143.194
+
+Трассировка маршрута к 194.143.245.220.in-addr.arpa [220.245.143.194]
+с максимальным числом прыжков 60:
+
+  1    <1 мс    <1 мс    <1 мс  rt [192.168.0.1]
+  2     2 ms     1 ms     1 ms  100.97.0.1
+  3     1 ms     1 ms     1 ms  188.254.26.240
+  4     1 ms     1 ms     1 ms  188.254.2.221
+  5    33 ms    33 ms    33 ms  188.128.126.95
+  6     *        *        *     Превышен интервал ожидания для запроса.
+  7    34 ms    34 ms    34 ms  be4649.ccr22.sto03.atlas.cogentco.com [130.117.3.130]
+  8    44 ms    43 ms    44 ms  be2557.rcr21.cph01.atlas.cogentco.com [154.54.61.241]
+  9     *       54 ms    54 ms  be2496.ccr41.ham01.atlas.cogentco.com [154.54.61.221]
+ 10    61 ms    60 ms    60 ms  be2815.ccr41.ams03.atlas.cogentco.com [154.54.38.205]
+ 11     *      193 ms   156 ms  be3530.ccr81.lon05.atlas.cogentco.com [154.54.75.153]
+ 12    65 ms    64 ms    64 ms  port-channel3464.ccr91.lhr01.atlas.cogentco.com [154.54.75.150]
+ 13   155 ms   155 ms     *     be8671.ccr41.jfk02.atlas.cogentco.com [154.54.167.69]
+ 14   149 ms   149 ms     *     port-channel4985.ccr91.cle04.atlas.cogentco.com [154.54.162.165]
+ 15   150 ms   149 ms     *     be2717.ccr41.ord01.atlas.cogentco.com [154.54.6.221]
+ 16   176 ms   176 ms     *     be5214.ccr31.oma02.atlas.cogentco.com [154.54.165.133]
+ 17     *        *        *     Превышен интервал ожидания для запроса.
+ 18   182 ms   183 ms     *     be2353.ccr81.slc03.atlas.cogentco.com [154.54.5.102]
+ 19   197 ms   197 ms     *     be3905.ccr21.sfo01.atlas.cogentco.com [154.54.1.210]
+ 20   202 ms   201 ms     *     be3096.ccr81.sjc13.atlas.cogentco.com [154.54.40.41]
+ 21   197 ms   197 ms     *     be2664.rcr71.sjc14.atlas.cogentco.com [154.54.88.230]
+ 22   363 ms     *      363 ms  Hu0-4-0-0.rcr21.b001848-1.sjc01.atlas.cogentco.com [38.32.115.106]
+ 23   376 ms     *      376 ms  syd-apt-ros-crt3-be-100.tpgi.com.au [203.29.134.43]
+ 24   364 ms     *      364 ms  syd-gls-har-crt3-be-30.tpg.com.au [203.29.135.105]
+ 25   366 ms     *      365 ms  syd-gls-har-bras220-po-10.tpgi.com.au [203.221.3.28]
+ 26     *      382 ms     *     194.143.245.220.in-addr.arpa [220.245.143.194]
+ 27   383 ms     *      382 ms  194.143.245.220.in-addr.arpa [220.245.143.194]
+
+Трассировка завершена.
+```

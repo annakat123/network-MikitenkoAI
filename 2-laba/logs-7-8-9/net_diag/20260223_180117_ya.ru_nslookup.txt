@@ -1,0 +1,8 @@
+﻿Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Name:    ya.ru
+Addresses:  2a02:6b8::2:242
+	  77.88.44.242
+	  5.255.255.242
+	  77.88.55.242

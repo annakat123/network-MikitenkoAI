@@ -1,0 +1,5 @@
+﻿Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Name:    dns.google
+Address:  8.8.8.8

@@ -1,0 +1,10 @@
+Shared resources at \\STUDY_IVAN
+
+
+
+Share name  Type  Used as  Comment  
+
+-------------------------------------------------------------------------------
+LR2Share    Disk                    
+The command completed successfully.
+

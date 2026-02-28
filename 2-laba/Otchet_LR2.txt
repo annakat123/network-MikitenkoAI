@@ -1,0 +1,666 @@
+1. Выполнить консольную команду TRACERT для любого узла сети интернет.
+C:\Users\Ivan>tracert -4 1.1.1.1
+
+Tracing route to one.one.one.one [1.1.1.1]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     6 ms     2 ms     2 ms  172.19.63.252
+  3     3 ms     2 ms     2 ms  10.200.40.9
+  4     5 ms     2 ms     3 ms  10.200.40.10
+  5     3 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6    65 ms    50 ms    45 ms  bsw01.hel.ertelecom.ru [188.234.72.50]
+  7    76 ms    92 ms    58 ms  188x234x131x45.ertelecom.ru [188.234.131.45]
+  8    47 ms    47 ms    41 ms  162.158.236.11
+  9    31 ms    31 ms    31 ms  one.one.one.one [1.1.1.1]
+
+Trace complete.
+
+C:\Users\Ivan>tracert -4 9.9.9.9
+
+Tracing route to dns9.quad9.net [9.9.9.9]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1]
+  2     5 ms     2 ms     2 ms  172.19.63.252
+  3     5 ms     2 ms     2 ms  10.200.40.9
+  4     6 ms     3 ms     3 ms  10.200.40.10
+  5     6 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6     5 ms     3 ms     4 ms  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221]
+  7     6 ms     3 ms     3 ms  mow-b2-link.ip.twelve99.net [62.115.145.220]
+  8    25 ms    26 ms    25 ms  sto-bb1-link.ip.twelve99.net [62.115.143.24]
+  9    25 ms    27 ms    25 ms  sto-b1-link.ip.twelve99.net [62.115.125.211]
+ 10    26 ms    25 ms    43 ms  i3dnet-ic-369293.ip.twelve99-cust.net [62.115.166.43]
+ 11    25 ms    25 ms    25 ms  hosted-by.i3d.net [109.200.195.196]
+ 12    25 ms    23 ms    25 ms  dns9.quad9.net [9.9.9.9]
+
+Trace complete.
+
+
+
+
+
+
+2. Выполнить консольную команду PATHPING для узла habinfo.ru , cdek.ru. 
+C:\Users\Ivan>pathping habinfo.ru
+
+Tracing route to habinfo.ru [185.177.219.148]
+over a maximum of 30 hops:
+  0  Study_Ivan [192.168.31.15]
+  1  XiaoQiang [192.168.31.1]
+  2  172.19.63.252
+  3  10.200.40.9
+  4  10.200.40.10
+  5  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+  6  nsk-ix.ertelecom.ru [193.232.87.49]
+  7  nsk-ix.adman.com [193.232.87.32]
+  8  nsk-mx5.adman.com [185.133.41.61]
+  9  185.177.219.148
+
+Computing statistics for 225 seconds...
+            Source to Here   This Node/Link
+Hop  RTT    Lost/Sent = Pct  Lost/Sent = Pct  Address
+  0                                           Study_Ivan [192.168.31.15]
+                                0/ 100 =  0%   |
+  1    1ms     0/ 100 =  0%     0/ 100 =  0%  XiaoQiang [192.168.31.1]
+                                0/ 100 =  0%   |
+  2  ---     100/ 100 =100%   100/ 100 =100%  172.19.63.252
+                                0/ 100 =  0%   |
+  3  ---     100/ 100 =100%   100/ 100 =100%  10.200.40.9
+                                0/ 100 =  0%   |
+  4  ---     100/ 100 =100%   100/ 100 =100%  10.200.40.10
+                                0/ 100 =  0%   |
+  5  ---     100/ 100 =100%   100/ 100 =100%  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18]
+                                0/ 100 =  0%   |
+  6  ---     100/ 100 =100%   100/ 100 =100%  nsk-ix.ertelecom.ru [193.232.87.49]
+                                0/ 100 =  0%   |
+  7  ---     100/ 100 =100%   100/ 100 =100%  nsk-ix.adman.com [193.232.87.32]
+                                0/ 100 =  0%   |
+  8   54ms     0/ 100 =  0%     0/ 100 =  0%  nsk-mx5.adman.com [185.133.41.61]
+                                0/ 100 =  0%   |
+  9   54ms     0/ 100 =  0%     0/ 100 =  0%  185.177.219.148
+
+Trace complete.
+
+
+
+
+
+
+3. Запустить из консоли на выполнение команду GETMAC для своего компьютера.
+C:\Users\Ivan>getmac
+
+Physical Address    Transport Name
+=================== ==========================================================
+F2-12-DF-A3-11-FA   Media disconnected
+A4-F9-33-31-30-D9   Media disconnected
+6C-1F-F7-13-42-AD   \Device\Tcpip_{F5C307B8-FEC1-494D-B0E7-567404BE3E38}
+00-50-56-C0-00-01   \Device\Tcpip_{8C698055-0CFE-45D0-9B2A-1E19C98BBE94}
+00-50-56-C0-00-08   \Device\Tcpip_{27B4A83E-78BC-4F96-BE8A-25D6CF2332DE}
+
+C:\Users\Ivan>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Study_Ivan
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Realtek USB GbE Family Controller
+   Physical Address. . . . . . . . . : 6C-1F-F7-13-42-AD
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::c55c:14b7:a879:be50%21(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.31.15(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Friday, February 20, 2026 5:03:36 PM
+   Lease Expires . . . . . . . . . . : Monday, February 23, 2026 12:01:50 AM
+   Default Gateway . . . . . . . . . : 192.168.31.1
+   DHCP Server . . . . . . . . . . . : 192.168.31.1
+   DHCPv6 IAID . . . . . . . . . . . : 325853175
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-F2-7B-79-6C-1F-F7-13-42-AD
+   DNS Servers . . . . . . . . . . . : fe80::8ede:f9ff:fee4:d318%21
+                                       192.168.31.1
+                                       fe80::8ede:f9ff:fee4:d318%21
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+   
+   
+   
+   
+   
+
+
+4. Командой NSLOOKUP определите IP-адрес Вашего роутера. 
+C:\Users\Ivan>nslookup 192.168.31.1
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Name:    XiaoQiang
+Address:  192.168.31.1
+
+
+C:\Users\Ivan>nslookup 192.168.31.15
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Name:    Study_Ivan
+Address:  192.168.31.15
+C:\Users\Ivan>nslookup google.com
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2a00:1450:4007:80f::200e
+          172.217.20.46
+
+
+C:\Users\Ivan>nslookup -4 google.com
+*** Invalid option: 4
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2a00:1450:4007:80f::200e
+          172.217.20.46
+
+
+C:\Users\Ivan>nslookup -4 mail.ru
+*** Invalid option: 4
+Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Non-authoritative answer:
+Name:    mail.ru
+Addresses:  89.221.239.1
+          185.180.201.1
+          90.156.232.4
+		  
+		  
+		  
+
+
+5. Командой NETSTAT соберите информацию об активных подключениях, открытых портах на Вашем компьютере.
+C:\Users\Ivan>netstat -an
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:902            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:912            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49671          0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:8180         127.0.0.1:8181         ESTABLISHED
+  TCP    127.0.0.1:8181         127.0.0.1:8180         ESTABLISHED
+  TCP    127.0.0.1:49676        127.0.0.1:49677        ESTABLISHED
+  TCP    127.0.0.1:49677        127.0.0.1:49676        ESTABLISHED
+  TCP    169.254.142.113:139    0.0.0.0:0              LISTENING
+  TCP    169.254.209.98:139     0.0.0.0:0              LISTENING
+  TCP    192.168.31.15:139      0.0.0.0:0              LISTENING
+  TCP    192.168.31.15:3694     142.251.142.3:443      ESTABLISHED
+  TCP    192.168.31.15:3695     188.234.73.195:80      TIME_WAIT
+  TCP    192.168.31.15:3696     188.234.73.144:80      TIME_WAIT
+  TCP    192.168.31.15:11603    142.251.39.200:443     ESTABLISHED
+  TCP    192.168.31.15:13901    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:15468    142.251.39.110:443     ESTABLISHED
+  TCP    192.168.31.15:16630    142.251.39.200:443     ESTABLISHED
+  TCP    192.168.31.15:18299    142.250.75.228:443     ESTABLISHED
+  TCP    192.168.31.15:18584    216.239.34.223:443     ESTABLISHED
+  TCP    192.168.31.15:19497    8.47.69.9:443          ESTABLISHED
+  TCP    192.168.31.15:20017    172.217.22.67:443      ESTABLISHED
+  TCP    192.168.31.15:25869    172.217.18.219:443     ESTABLISHED
+  TCP    192.168.31.15:25980    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:26090    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:28235    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:32025    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:34227    108.177.15.188:5228    ESTABLISHED
+  TCP    192.168.31.15:35440    142.251.39.106:443     ESTABLISHED
+  TCP    192.168.31.15:35637    172.217.20.46:443      ESTABLISHED
+  TCP    192.168.31.15:36030    142.251.127.84:443     ESTABLISHED
+  TCP    192.168.31.15:36185    149.154.167.99:443     ESTABLISHED
+  TCP    192.168.31.15:37618    149.154.170.200:443    FIN_WAIT_1
+  TCP    192.168.31.15:38945    216.239.38.181:443     ESTABLISHED
+  TCP    192.168.31.15:40370    172.217.20.35:443      ESTABLISHED
+  TCP    192.168.31.15:40725    172.64.155.209:443     ESTABLISHED
+  TCP    192.168.31.15:40740    172.217.22.163:443     ESTABLISHED
+  TCP    192.168.31.15:42504    172.217.20.42:443      ESTABLISHED
+  TCP    192.168.31.15:43249    142.251.142.3:443      ESTABLISHED
+  TCP    192.168.31.15:45665    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:45727    142.251.142.3:443      ESTABLISHED
+  TCP    192.168.31.15:46044    142.250.75.228:443     ESTABLISHED
+  TCP    192.168.31.15:46913    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:47214    142.250.75.228:443     ESTABLISHED
+  TCP    192.168.31.15:49582    4.207.247.137:443      ESTABLISHED
+  TCP    192.168.31.15:50277    104.18.0.22:443        ESTABLISHED
+  TCP    192.168.31.15:51610    142.251.39.110:443     TIME_WAIT
+  TCP    192.168.31.15:55737    149.154.170.200:443    FIN_WAIT_1
+  TCP    192.168.31.15:56828    149.154.170.200:443    ESTABLISHED
+  TCP    192.168.31.15:58139    142.251.127.198:443    ESTABLISHED
+  TCP    [::]:135               [::]:0                 LISTENING
+  TCP    [::]:445               [::]:0                 LISTENING
+  TCP    [::]:49664             [::]:0                 LISTENING
+  TCP    [::]:49665             [::]:0                 LISTENING
+  TCP    [::]:49666             [::]:0                 LISTENING
+  TCP    [::]:49667             [::]:0                 LISTENING
+  TCP    [::]:49671             [::]:0                 LISTENING
+  TCP    [::1]:49670            [::]:0                 LISTENING
+  UDP    0.0.0.0:500            *:*
+  UDP    0.0.0.0:4500           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5355           *:*
+  UDP    0.0.0.0:50421          *:*
+  UDP    0.0.0.0:56089          35.190.80.1:443
+  UDP    0.0.0.0:58937          *:*
+  UDP    0.0.0.0:59192          *:*
+  UDP    0.0.0.0:62597          *:*
+  UDP    0.0.0.0:63236          *:*
+  UDP    127.0.0.1:1900         *:*
+  UDP    127.0.0.1:58945        *:*
+  UDP    127.0.0.1:62321        127.0.0.1:62321
+  UDP    169.254.142.113:137    *:*
+  UDP    169.254.142.113:138    *:*
+  UDP    169.254.142.113:1900   *:*
+  UDP    169.254.142.113:2177   *:*
+  UDP    169.254.142.113:58944  *:*
+  UDP    169.254.209.98:137     *:*
+  UDP    169.254.209.98:138     *:*
+  UDP    169.254.209.98:1900    *:*
+  UDP    169.254.209.98:2177    *:*
+  UDP    169.254.209.98:58943   *:*
+  UDP    192.168.31.15:137      *:*
+  UDP    192.168.31.15:138      *:*
+  UDP    192.168.31.15:1900     *:*
+  UDP    192.168.31.15:2177     *:*
+  UDP    192.168.31.15:58942    *:*
+  UDP    [::]:500               *:*
+  UDP    [::]:4500              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5355              *:*
+  UDP    [::]:50421             *:*
+  UDP    [::]:58937             *:*
+  UDP    [::]:59192             *:*
+  UDP    [::]:62597             *:*
+  UDP    [::]:63236             *:*
+  UDP    [::1]:1900             *:*
+  UDP    [::1]:58941            *:*
+  UDP    [fe80::9e37:889c:b185:6f0f%14]:1900  *:*
+  UDP    [fe80::9e37:889c:b185:6f0f%14]:2177  *:*
+  UDP    [fe80::9e37:889c:b185:6f0f%14]:58939  *:*
+  UDP    [fe80::ad81:56f4:11b0:d18b%6]:1900  *:*
+  UDP    [fe80::ad81:56f4:11b0:d18b%6]:2177  *:*
+  UDP    [fe80::ad81:56f4:11b0:d18b%6]:58940  *:*
+  UDP    [fe80::c55c:14b7:a879:be50%21]:1900  *:*
+  UDP    [fe80::c55c:14b7:a879:be50%21]:2177  *:*
+  UDP    [fe80::c55c:14b7:a879:be50%21]:58938  *:*
+
+C:\Users\Ivan>netstat -r
+===========================================================================
+Interface List
+ 21...6c 1f f7 13 42 ad ......Realtek USB GbE Family Controller
+ 12...a4 f9 33 31 30 d6 ......Microsoft Wi-Fi Direct Virtual Adapter
+ 20...a6 f9 33 31 30 d5 ......Microsoft Wi-Fi Direct Virtual Adapter #2
+ 11...f2 12 df a3 11 fa ......Intel(R) Wi-Fi 6 AX201 160MHz
+ 14...00 50 56 c0 00 01 ......VMware Virtual Ethernet Adapter for VMnet1
+  6...00 50 56 c0 00 08 ......VMware Virtual Ethernet Adapter for VMnet8
+  9...a4 f9 33 31 30 d9 ......Bluetooth Device (Personal Area Network)
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0     192.168.31.1    192.168.31.15     25
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    331
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    331
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+      169.254.0.0      255.255.0.0         On-link    169.254.209.98    291
+      169.254.0.0      255.255.0.0         On-link   169.254.142.113    291
+  169.254.142.113  255.255.255.255         On-link   169.254.142.113    291
+   169.254.209.98  255.255.255.255         On-link    169.254.209.98    291
+  169.254.255.255  255.255.255.255         On-link    169.254.209.98    291
+  169.254.255.255  255.255.255.255         On-link   169.254.142.113    291
+     192.168.31.0    255.255.255.0         On-link     192.168.31.15    281
+    192.168.31.15  255.255.255.255         On-link     192.168.31.15    281
+   192.168.31.255  255.255.255.255         On-link     192.168.31.15    281
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link     192.168.31.15    281
+        224.0.0.0        240.0.0.0         On-link   169.254.142.113    291
+        224.0.0.0        240.0.0.0         On-link    169.254.209.98    291
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+  255.255.255.255  255.255.255.255         On-link     192.168.31.15    281
+  255.255.255.255  255.255.255.255         On-link   169.254.142.113    291
+  255.255.255.255  255.255.255.255         On-link    169.254.209.98    291
+===========================================================================
+Persistent Routes:
+  None
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+  1    331 ::1/128                  On-link
+ 21    281 fe80::/64                On-link
+  6    291 fe80::/64                On-link
+ 14    291 fe80::/64                On-link
+ 14    291 fe80::9e37:889c:b185:6f0f/128
+                                    On-link
+  6    291 fe80::ad81:56f4:11b0:d18b/128
+                                    On-link
+ 21    281 fe80::c55c:14b7:a879:be50/128
+                                    On-link
+  1    331 ff00::/8                 On-link
+ 21    281 ff00::/8                 On-link
+  6    291 ff00::/8                 On-link
+ 14    291 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None
+
+C:\Users\Ivan>netstat -s
+
+IPv4 Statistics
+
+  Packets Received                   = 13627347
+  Received Header Errors             = 0
+  Received Address Errors            = 9741
+  Datagrams Forwarded                = 27
+  Unknown Protocols Received         = 0
+  Received Packets Discarded         = 98265
+  Received Packets Delivered         = 13591475
+  Output Requests                    = 9361962
+  Routing Discards                   = 0
+  Discarded Output Packets           = 50
+  Output Packet No Route             = 184
+  Reassembly Required                = 0
+  Reassembly Successful              = 0
+  Reassembly Failures                = 0
+  Datagrams Successfully Fragmented  = 1120
+  Datagrams Failing Fragmentation    = 0
+  Fragments Created                  = 2240
+
+IPv6 Statistics
+
+  Packets Received                   = 17503
+  Received Header Errors             = 0
+  Received Address Errors            = 278
+  Datagrams Forwarded                = 0
+  Unknown Protocols Received         = 0
+  Received Packets Discarded         = 1669
+  Received Packets Delivered         = 22092
+  Output Requests                    = 13977
+  Routing Discards                   = 0
+  Discarded Output Packets           = 26
+  Output Packet No Route             = 0
+  Reassembly Required                = 0
+  Reassembly Successful              = 0
+  Reassembly Failures                = 0
+  Datagrams Successfully Fragmented  = 0
+  Datagrams Failing Fragmentation    = 0
+  Fragments Created                  = 0
+
+ICMPv4 Statistics
+
+                            Received    Sent
+  Messages                  593         18107
+  Errors                    0           0
+  Destination Unreachable   137         16972
+  Time Exceeded             124         0
+  Parameter Problems        0           0
+  Source Quenches           0           0
+  Redirects                 0           0
+  Echo Replies              332         0
+  Echos                     0           1135
+  Timestamps                0           0
+  Timestamp Replies         0           0
+  Address Masks             0           0
+  Address Mask Replies      0           0
+  Router Solicitations      0           0
+  Router Advertisements     0           0
+
+ICMPv6 Statistics
+
+                            Received    Sent
+  Messages                  7714        2577
+  Errors                    0           0
+  Destination Unreachable   0           1236
+  Packet Too Big            0           0
+  Time Exceeded             0           0
+  Parameter Problems        0           0
+  Echos                     0           0
+  Echo Replies              0           0
+  MLD Queries               0           0
+  MLD Reports               0           0
+  MLD Dones                 0           0
+  Router Solicitations      0           123
+  Router Advertisements     6524        0
+  Neighbor Solicitations    906         380
+  Neighbor Advertisements   284         838
+  Redirects                 0           0
+  Router Renumberings       0           0
+
+TCP Statistics for IPv4
+
+  Active Opens                        = 86671
+  Passive Opens                       = 15204
+  Failed Connection Attempts          = 36173
+  Reset Connections                   = 13148
+  Current Connections                 = 37
+  Segments Received                   = 22731944
+  Segments Sent                       = 17939286
+  Segments Retransmitted              = 46428
+
+TCP Statistics for IPv6
+
+  Active Opens                        = 56
+  Passive Opens                       = 9
+  Failed Connection Attempts          = 15
+  Reset Connections                   = 18
+  Current Connections                 = 0
+  Segments Received                   = 3461471
+  Segments Sent                       = 3461466
+  Segments Retransmitted              = 39
+
+UDP Statistics for IPv4
+
+  Datagrams Received    = 1488040
+  No Ports              = 96896
+  Receive Errors        = 0
+  Datagrams Sent        = 2003556
+
+UDP Statistics for IPv6
+
+  Datagrams Received    = 27165
+  No Ports              = 1554
+  Receive Errors        = 0
+  Datagrams Sent        = 10181
+  
+  
+
+
+
+
+6. При выполнении консольной команды NETSH отобразите доступ к изменениям и настройкам файервола, сетевой карты, DHCP сервера.
+C:\Users\Ivan>netsh wlan show networks mode=bssid
+
+Interface name : WiFi
+Network shell commands need location permission to access WLAN information. Turn on Location services on the Location page in Privacy & security settings.
+
+Here is the URI for the Location page in the Settings app:
+ms-settings:privacy-location
+To open the Location page in the Settings app, hold down the Ctrl key and select the link, or run the following command:
+start ms-settings:privacy-location
+
+Or, to open the Location page from the Run dialog box, press Windows logo key + R, and then copy and paste the URI above.
+
+Access is denied.
+
+
+
+C:\Users\Ivan>netsh wlan show drivers
+
+Interface name: WiFi
+
+    Driver                    : Intel(R) Wi-Fi 6 AX201 160MHz
+    Vendor                    : Intel Corporation
+    Provider                  : Intel
+    Date                      : 11/11/2025
+    Version                   : 24.10.0.4
+    INF file                  : oem4.inf
+    Type                      : Native Wi-Fi Driver
+    Radio types supported     : 802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+    FIPS 140 mode supported   : Yes
+    802.11w Management Frame Protection supported : Yes
+    Hosted network supported  : No
+    Authentication and cipher supported in infrastructure mode:
+                                Open             None
+                                Open             WEP-40bit
+                                Open             WEP-104bit
+                                Open             WEP
+                                WPA-Enterprise   TKIP
+                                WPA-Enterprise   CCMP
+                                WPA-Personal     TKIP
+                                WPA-Personal     CCMP
+                                WPA2-Enterprise  TKIP
+                                WPA2-Enterprise  CCMP
+                                WPA2-Personal    TKIP
+                                WPA2-Personal    CCMP
+                                Open             Vendor defined
+                                WPA3-Personal    CCMP
+                                Vendor defined   Vendor defined
+                                WPA3-Enterprise 192 Bits GCMP-256
+                                OWE              CCMP
+                                WPA3-Enterprise  CCMP
+    Number of supported bands : 2
+                                2.4 GHz [ 0 MHz - 0 MHz]
+                                5 GHz [ 0 MHz - 0 MHz]
+    IHV service present       : Yes
+    IHV adapter OUI           : [00 00 00], type: [00]
+    IHV extensibility DLL path: C:\WINDOWS\system32\IntelIHVRouter14.dll
+    IHV UI extensibility ClSID: {00000000-0000-0000-0000-000000000000}
+    IHV diagnostics CLSID     : {00000000-0000-0000-0000-000000000000}
+    Wireless Display Supported: Yes (Graphics Driver: Yes, Wi-Fi Driver: Yes)
+	
+	
+	
+
+
+
+7. С помощью команды NET запустить, а затем остановить сетевую службу DNS-клиент, Планировщик заданий, еще 2-3 службы.
+C:\Users\Ivan>net stop dnscache
+The requested pause, continue, or stop is not valid for this service.
+
+More help is available by typing NET HELPMSG 2191.
+
+C:\Users\Ivan>net start dnscache
+The requested service has already been started.
+
+More help is available by typing NET HELPMSG 2182.
+
+
+
+8. Route
+C:\Users\Ivan>route print
+===========================================================================
+Interface List
+ 21...6c 1f f7 13 42 ad ......Realtek USB GbE Family Controller
+ 12...a4 f9 33 31 30 d6 ......Microsoft Wi-Fi Direct Virtual Adapter
+ 20...a6 f9 33 31 30 d5 ......Microsoft Wi-Fi Direct Virtual Adapter #2
+ 11...f2 12 df a3 11 fa ......Intel(R) Wi-Fi 6 AX201 160MHz
+ 14...00 50 56 c0 00 01 ......VMware Virtual Ethernet Adapter for VMnet1
+  6...00 50 56 c0 00 08 ......VMware Virtual Ethernet Adapter for VMnet8
+  9...a4 f9 33 31 30 d9 ......Bluetooth Device (Personal Area Network)
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0     192.168.31.1    192.168.31.15     25
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    331
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    331
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+      169.254.0.0      255.255.0.0         On-link    169.254.209.98    291
+      169.254.0.0      255.255.0.0         On-link   169.254.142.113    291
+  169.254.142.113  255.255.255.255         On-link   169.254.142.113    291
+   169.254.209.98  255.255.255.255         On-link    169.254.209.98    291
+  169.254.255.255  255.255.255.255         On-link    169.254.209.98    291
+  169.254.255.255  255.255.255.255         On-link   169.254.142.113    291
+     192.168.31.0    255.255.255.0         On-link     192.168.31.15    281
+    192.168.31.15  255.255.255.255         On-link     192.168.31.15    281
+   192.168.31.255  255.255.255.255         On-link     192.168.31.15    281
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link     192.168.31.15    281
+        224.0.0.0        240.0.0.0         On-link   169.254.142.113    291
+        224.0.0.0        240.0.0.0         On-link    169.254.209.98    291
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+  255.255.255.255  255.255.255.255         On-link     192.168.31.15    281
+  255.255.255.255  255.255.255.255         On-link   169.254.142.113    291
+  255.255.255.255  255.255.255.255         On-link    169.254.209.98    291
+===========================================================================
+Persistent Routes:
+  None
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+  1    331 ::1/128                  On-link
+ 21    281 fe80::/64                On-link
+  6    291 fe80::/64                On-link
+ 14    291 fe80::/64                On-link
+ 14    291 fe80::9e37:889c:b185:6f0f/128
+                                    On-link
+  6    291 fe80::ad81:56f4:11b0:d18b/128
+                                    On-link
+ 21    281 fe80::c55c:14b7:a879:be50/128
+                                    On-link
+  1    331 ff00::/8                 On-link
+ 21    281 ff00::/8                 On-link
+  6    291 ff00::/8                 On-link
+ 14    291 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None
+  
+  
+  
+ 
+ 
+
+9. Изучите утилиту TELNET и ее параметры. 
+C:\Users\Ivan>telnet towel.blinkenlights.nl
+'telnet' is not recognized as an internal or external command,
+operable program or batch file.

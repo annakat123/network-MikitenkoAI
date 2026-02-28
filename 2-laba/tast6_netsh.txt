@@ -1,0 +1,315 @@
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh /?
+
+Usage: netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] [-p Password | *]
+             [Command | -f ScriptFile]
+
+The following commands are available:
+
+Commands in this context:
+?              - Displays a list of commands.
+add            - Adds a configuration entry to a list of entries.
+advfirewall    - Changes to the `netsh advfirewall' context.
+branchcache    - Changes to the `netsh branchcache' context.
+bridge         - Changes to the `netsh bridge' context.
+delete         - Deletes a configuration entry from a list of entries.
+dhcpclient     - Changes to the `netsh dhcpclient' context.
+dnsclient      - Changes to the `netsh dnsclient' context.
+dump           - Displays a configuration script.
+exec           - Runs a script file.
+firewall       - Changes to the `netsh firewall' context.
+help           - Displays a list of commands.
+http           - Changes to the `netsh http' context.
+interface      - Changes to the `netsh interface' context.
+ipsec          - Changes to the `netsh ipsec' context.
+lan            - Changes to the `netsh lan' context.
+mbn            - Changes to the `netsh mbn' context.
+namespace      - Changes to the `netsh namespace' context.
+netio          - Changes to the `netsh netio' context.
+nlm            - Changes to the `netsh nlm' context.
+ras            - Changes to the `netsh ras' context.
+rpc            - Changes to the `netsh rpc' context.
+set            - Updates configuration settings.
+show           - Displays information.
+trace          - Changes to the `netsh trace' context.
+wcn            - Changes to the `netsh wcn' context.
+wfp            - Changes to the `netsh wfp' context.
+winhttp        - Changes to the `netsh winhttp' context.
+winsock        - Changes to the `netsh winsock' context.
+wlan           - Changes to the `netsh wlan' context.
+
+The following sub-contexts are available:
+ advfirewall branchcache bridge dhcpclient dnsclient firewall http interface ipsec lan mbn namespace netio nlm ras rpc trace wcn wfp winhttp winsock wlan
+
+To view help for a command, type the command, followed by a space, and then
+ type ?.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh advfirewall show allprofiles
+
+Domain Profile Settings:
+----------------------------------------------------------------------
+State                                 ON
+Firewall Policy                       BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (GPO-store only)
+LocalConSecRules                      N/A (GPO-store only)
+InboundUserNotification               Enable
+RemoteManagement                      Disable
+UnicastResponseToMulticast            Enable
+
+Logging:
+LogAllowedConnections                 Disable
+LogDroppedConnections                 Disable
+FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log
+MaxFileSize                           4096
+
+
+Private Profile Settings:
+----------------------------------------------------------------------
+State                                 ON
+Firewall Policy                       BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (GPO-store only)
+LocalConSecRules                      N/A (GPO-store only)
+InboundUserNotification               Enable
+RemoteManagement                      Disable
+UnicastResponseToMulticast            Enable
+
+Logging:
+LogAllowedConnections                 Disable
+LogDroppedConnections                 Disable
+FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log
+MaxFileSize                           4096
+
+
+Public Profile Settings:
+----------------------------------------------------------------------
+State                                 ON
+Firewall Policy                       BlockInbound,AllowOutbound
+LocalFirewallRules                    N/A (GPO-store only)
+LocalConSecRules                      N/A (GPO-store only)
+InboundUserNotification               Enable
+RemoteManagement                      Disable
+UnicastResponseToMulticast            Enable
+
+Logging:
+LogAllowedConnections                 Disable
+LogDroppedConnections                 Disable
+FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log
+MaxFileSize                           4096
+
+Ok.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh interface ip show config
+
+Configuration for interface "Ethernet"
+    DHCP enabled:                         Yes
+    IP Address:                           192.168.31.15
+    Subnet Prefix:                        192.168.31.0/24 (mask 255.255.255.0)
+    Default Gateway:                      192.168.31.1
+    Gateway Metric:                       0
+    InterfaceMetric:                      25
+    DNS servers configured through DHCP:  192.168.31.1
+    Register with which suffix:           Primary only
+    WINS servers configured through DHCP: None
+
+Configuration for interface "Local Area Connection* 9"
+    DHCP enabled:                         Yes
+    InterfaceMetric:                      25
+    DNS servers configured through DHCP:  None
+    Register with which suffix:           Primary only
+    WINS servers configured through DHCP: None
+
+Configuration for interface "Local Area Connection* 10"
+    DHCP enabled:                         No
+    InterfaceMetric:                      25
+    Statically Configured DNS Servers:    None
+    Register with which suffix:           Primary only
+    Statically Configured WINS Servers:   None
+
+Configuration for interface "WiFi"
+    DHCP enabled:                         Yes
+    InterfaceMetric:                      30
+    DNS servers configured through DHCP:  192.168.31.1
+    Register with which suffix:           Primary only
+    WINS servers configured through DHCP: None
+
+Configuration for interface "VMware Network Adapter VMnet1"
+    DHCP enabled:                         Yes
+    IP Address:                           169.254.209.98
+    Subnet Prefix:                        169.254.0.0/16 (mask 255.255.0.0)
+    InterfaceMetric:                      35
+    DNS servers configured through DHCP:  None
+    Register with which suffix:           Primary only
+    WINS servers configured through DHCP: None
+
+Configuration for interface "VMware Network Adapter VMnet8"
+    DHCP enabled:                         Yes
+    IP Address:                           169.254.142.113
+    Subnet Prefix:                        169.254.0.0/16 (mask 255.255.0.0)
+    InterfaceMetric:                      35
+    DNS servers configured through DHCP:  None
+    Register with which suffix:           Primary only
+    WINS servers configured through DHCP: None
+
+Configuration for interface "Bluetooth Network Connection"
+    DHCP enabled:                         Yes
+    InterfaceMetric:                      65
+    DNS servers configured through DHCP:  None
+    Register with which suffix:           Primary only
+    WINS servers configured through DHCP: None
+
+Configuration for interface "Loopback Pseudo-Interface 1"
+    DHCP enabled:                         No
+    IP Address:                           127.0.0.1
+    Subnet Prefix:                        127.0.0.0/8 (mask 255.0.0.0)
+    InterfaceMetric:                      75
+    Statically Configured DNS Servers:    None
+    Register with which suffix:           Primary only
+    Statically Configured WINS Servers:   None
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh dhcp show server
+The following command was not found: dhcp show server.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh dhcp server
+The following command was not found: dhcp server.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>dhcp
+'dhcp' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>ipconfig /all | Select-String -Pattern "DHCP|Lease|Default Gateway|DNS Servers"
+'Select-String' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>ipconfig /all | findstr /i "DHCP Server DNS Servers"
+   Primary Dns Suffix  . . . . . . . :
+   Connection-specific DNS Suffix  . :
+   DHCP Enabled. . . . . . . . . . . : Yes
+   DHCP Server . . . . . . . . . . . : 192.168.31.1
+   DHCPv6 IAID . . . . . . . . . . . : 325853175
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-F2-7B-79-6C-1F-F7-13-42-AD
+   DNS Servers . . . . . . . . . . . : fe80::8ede:f9ff:fee4:d318%21
+   Connection-specific DNS Suffix  . :
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Connection-specific DNS Suffix  . :
+   DHCP Enabled. . . . . . . . . . . : No
+   Connection-specific DNS Suffix  . :
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Connection-specific DNS Suffix  . :
+   DHCP Enabled. . . . . . . . . . . : Yes
+   DHCPv6 IAID . . . . . . . . . . . : 553668694
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-F2-7B-79-6C-1F-F7-13-42-AD
+   Connection-specific DNS Suffix  . :
+   DHCP Enabled. . . . . . . . . . . : Yes
+   DHCPv6 IAID . . . . . . . . . . . : 570445910
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-30-F2-7B-79-6C-1F-F7-13-42-AD
+   Connection-specific DNS Suffix  . :
+   DHCP Enabled. . . . . . . . . . . : Yes
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh wlan show networks mode=bssid
+
+Interface name : WiFi
+Network shell commands need location permission to access WLAN information. Turn on Location services on the Location page in Privacy & security settings.
+
+Here is the URI for the Location page in the Settings app:
+ms-settings:privacy-location
+To open the Location page in the Settings app, hold down the Ctrl key and select the link, or run the following command:start ms-settings:privacy-location
+
+Or, to open the Location page from the Run dialog box, press Windows logo key + R, and then copy and paste the URI above.
+
+Access is denied.
+
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh wlan show networks mode=bssid
+
+Interface name : WiFi
+Network shell commands need location permission to access WLAN information. Turn on Location services on the Location page in Privacy & security settings.
+
+Here is the URI for the Location page in the Settings app:
+ms-settings:privacy-location
+To open the Location page in the Settings app, hold down the Ctrl key and select the link, or run the following command:start ms-settings:privacy-location
+
+Or, to open the Location page from the Run dialog box, press Windows logo key + R, and then copy and paste the URI above.
+
+Access is denied.
+
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh wlan show drivers
+
+Interface name: WiFi
+
+    Driver                    : Intel(R) Wi-Fi 6 AX201 160MHz
+    Vendor                    : Intel Corporation
+    Provider                  : Intel
+    Date                      : 11/11/2025
+    Version                   : 24.10.0.4
+    INF file                  : oem4.inf
+    Type                      : Native Wi-Fi Driver
+    Radio types supported     : 802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+    FIPS 140 mode supported   : Yes
+    802.11w Management Frame Protection supported : Yes
+    Hosted network supported  : No
+    Authentication and cipher supported in infrastructure mode:
+                                Open             None
+                                Open             WEP-40bit
+                                Open             WEP-104bit
+                                Open             WEP
+                                WPA-Enterprise   TKIP
+                                WPA-Enterprise   CCMP
+                                WPA-Personal     TKIP
+                                WPA-Personal     CCMP
+                                WPA2-Enterprise  TKIP
+                                WPA2-Enterprise  CCMP
+                                WPA2-Personal    TKIP
+                                WPA2-Personal    CCMP
+                                Open             Vendor defined
+                                WPA3-Personal    CCMP
+                                Vendor defined   Vendor defined
+                                WPA3-Enterprise 192 Bits GCMP-256
+                                OWE              CCMP
+                                WPA3-Enterprise  CCMP
+    Number of supported bands : 2
+                                2.4 GHz [ 0 MHz - 0 MHz]
+                                5 GHz [ 0 MHz - 0 MHz]
+    IHV service present       : Yes
+    IHV adapter OUI           : [00 00 00], type: [00]
+    IHV extensibility DLL path: C:\WINDOWS\system32\IntelIHVRouter14.dll
+    IHV UI extensibility ClSID: {00000000-0000-0000-0000-000000000000}
+    IHV diagnostics CLSID     : {00000000-0000-0000-0000-000000000000}
+    Wireless Display Supported: Yes (Graphics Driver: Yes, Wi-Fi Driver: Yes)
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh wlan set hostednetwork mode=allow ssid=LR2_Test key=Password123
+The hosted network mode has been set to allow.
+The SSID of the hosted network has been successfully changed.
+The user key passphrase of the hosted network has been successfully changed.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh wlan start hostednetwork
+The hosted network couldn't be started.
+The group or resource is not in the correct state to perform the requested operation.
+
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh wlan show hostednetwork
+
+Hosted network settings
+-----------------------
+    Mode                   : Allowed
+    SSID name              : "LR2_Test"
+    Max number of clients  : 100
+    Authentication         : WPA2-Personal
+    Cipher                 : CCMP
+
+Hosted network status
+---------------------
+    Status                 : Not available
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>netsh wlan stop hostednetwork
+The hosted network stopped.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>

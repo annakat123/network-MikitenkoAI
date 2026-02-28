@@ -1,0 +1,157 @@
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::c55c:14b7:a879:be50%21
+   IPv4 Address. . . . . . . . . . . : 192.168.31.15
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.31.1
+
+Wireless LAN adapter Local Area Connection* 9:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter WiFi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::9e37:889c:b185:6f0f%14
+   Autoconfiguration IPv4 Address. . : 169.254.209.98
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::ad81:56f4:11b0:d18b%6
+   Autoconfiguration IPv4 Address. . : 169.254.142.113
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>getmac /v
+
+Connection Name Network Adapter Physical Address    Transport Name
+=============== =============== =================== ==========================================================
+WiFi            Intel(R) Wi-Fi  F2-12-DF-A3-11-FA   Media disconnected
+Bluetooth Netwo Bluetooth Devic A4-F9-33-31-30-D9   Media disconnected
+Ethernet        Realtek USB GbE 6C-1F-F7-13-42-AD   \Device\Tcpip_{F5C307B8-FEC1-494D-B0E7-567404BE3E38}
+VMware Network  VMware Virtual  00-50-56-C0-00-01   \Device\Tcpip_{8C698055-0CFE-45D0-9B2A-1E19C98BBE94}
+VMware Network  VMware Virtual  00-50-56-C0-00-08   \Device\Tcpip_{27B4A83E-78BC-4F96-BE8A-25D6CF2332DE}
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>getmac
+
+Physical Address    Transport Name
+=================== ==========================================================
+F2-12-DF-A3-11-FA   Media disconnected
+A4-F9-33-31-30-D9   Media disconnected
+6C-1F-F7-13-42-AD   \Device\Tcpip_{F5C307B8-FEC1-494D-B0E7-567404BE3E38}
+00-50-56-C0-00-01   \Device\Tcpip_{8C698055-0CFE-45D0-9B2A-1E19C98BBE94}
+00-50-56-C0-00-08   \Device\Tcpip_{27B4A83E-78BC-4F96-BE8A-25D6CF2332DE}
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>getmac /s ya.ru /v
+ERROR: The RPC server is unavailable.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>getmac /s google.com /v
+ERROR: The RPC server is unavailable.
+
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>arp -a
+
+Interface: 169.254.142.113 --- 0x6
+  Internet Address      Physical Address      Type
+  169.254.255.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  230.0.0.1             01-00-5e-00-00-01     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+Interface: 169.254.209.98 --- 0xe
+  Internet Address      Physical Address      Type
+  169.254.255.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  230.0.0.1             01-00-5e-00-00-01     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+Interface: 192.168.31.15 --- 0x15
+  Internet Address      Physical Address      Type
+  192.168.31.1          8c-de-f9-e4-d3-18     dynamic
+  192.168.31.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  230.0.0.1             01-00-5e-00-00-01     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>ping 192.168.31.1
+
+Pinging 192.168.31.1 with 32 bytes of data:
+Reply from 192.168.31.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.31.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.31.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.31.1: bytes=32 time=1ms TTL=64
+
+Ping statistics for 192.168.31.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>arp -a
+
+Interface: 169.254.142.113 --- 0x6
+  Internet Address      Physical Address      Type
+  169.254.255.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  230.0.0.1             01-00-5e-00-00-01     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+Interface: 169.254.209.98 --- 0xe
+  Internet Address      Physical Address      Type
+  169.254.255.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  230.0.0.1             01-00-5e-00-00-01     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+Interface: 192.168.31.15 --- 0x15
+  Internet Address      Physical Address      Type
+  192.168.31.1          8c-de-f9-e4-d3-18     dynamic
+  192.168.31.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  230.0.0.1             01-00-5e-00-00-01     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>

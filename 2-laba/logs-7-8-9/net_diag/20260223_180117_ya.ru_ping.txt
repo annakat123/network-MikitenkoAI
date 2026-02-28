@@ -1,0 +1,10 @@
+﻿Pinging ya.ru [77.88.55.242] with 32 bytes of data:
+Reply from 77.88.55.242: bytes=32 time=12ms TTL=54
+Reply from 77.88.55.242: bytes=32 time=11ms TTL=54
+Reply from 77.88.55.242: bytes=32 time=12ms TTL=54
+Reply from 77.88.55.242: bytes=32 time=12ms TTL=54
+
+Ping statistics for 77.88.55.242:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 11ms, Maximum = 12ms, Average = 11ms

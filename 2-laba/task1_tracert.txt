@@ -1,0 +1,73 @@
+
+Tracing route to one.one.one.one [1.1.1.1]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1] 
+  2     5 ms     2 ms     2 ms  172.19.63.252 
+  3     5 ms     2 ms     2 ms  10.200.40.9 
+  4     5 ms     3 ms     3 ms  10.200.40.10 
+  5     5 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18] 
+  6    33 ms    34 ms    54 ms  188x234x72x50.dynamic.omsk.ertelecom.ru [188.234.72.50] 
+  7    58 ms    44 ms    58 ms  188x234x131x45.ertelecom.ru [188.234.131.45] 
+  8    59 ms    50 ms    48 ms  162.158.236.11 
+  9    34 ms    34 ms    34 ms  one.one.one.one [1.1.1.1] 
+
+Trace complete.
+
+Tracing route to dns9.quad9.net [9.9.9.9]
+over a maximum of 30 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1] 
+  2     6 ms     3 ms     3 ms  172.19.63.252 
+  3     5 ms     2 ms     2 ms  10.200.40.9 
+  4     5 ms     2 ms     2 ms  10.200.40.10 
+  5     3 ms     2 ms     2 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18] 
+  6     6 ms     4 ms     3 ms  ertelekom-ic-389478.ip.twelve99-cust.net [62.115.145.221] 
+  7     4 ms     3 ms     4 ms  mow-b2-link.ip.twelve99.net [62.115.145.220] 
+  8    26 ms    25 ms    25 ms  sto-bb1-link.ip.twelve99.net [62.115.143.24] 
+  9    26 ms    26 ms    26 ms  sto-b1-link.ip.twelve99.net [62.115.125.211] 
+ 10    26 ms    26 ms    26 ms  i3dnet-ic-369293.ip.twelve99-cust.net [62.115.166.43] 
+ 11    26 ms    26 ms    23 ms  hosted-by.i3d.net [109.200.195.196] 
+ 12    23 ms    25 ms    25 ms  dns9.quad9.net [9.9.9.9] 
+
+Trace complete.
+
+Tracing route to 8.8.8.8 over a maximum of 30 hops
+
+  1     1 ms     1 ms     1 ms  192.168.31.1 
+  2     5 ms     2 ms     2 ms  172.19.63.252 
+  3     5 ms     2 ms     2 ms  10.200.40.9 
+  4     4 ms     2 ms     2 ms  10.200.40.10 
+  5     5 ms     3 ms     2 ms  176.213.132.18 
+  6     6 ms     4 ms     3 ms  72.14.215.165 
+  7    17 ms    16 ms    16 ms  188.234.131.225 
+  8     *       14 ms    16 ms  216.239.49.19 
+  9    17 ms    15 ms    17 ms  192.178.241.234 
+ 10     *        *        *     Request timed out.
+ 11    23 ms    23 ms    24 ms  142.251.238.66 
+ 12    23 ms    23 ms    24 ms  142.250.208.23 
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24    24 ms    23 ms    21 ms  8.8.8.8 
+
+Trace complete.
+
+Tracing route to dns.google [8.8.8.8]
+over a maximum of 5 hops:
+
+  1     1 ms     1 ms     1 ms  XiaoQiang [192.168.31.1] 
+  2     5 ms     2 ms     2 ms  172.19.63.252 
+  3     5 ms     2 ms     2 ms  10.200.40.9 
+  4     4 ms     2 ms     2 ms  10.200.40.10 
+  5     7 ms    20 ms     5 ms  176x213x132x18.static-business.msk.ertelecom.ru [176.213.132.18] 
+
+Trace complete.

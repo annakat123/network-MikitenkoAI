@@ -1,0 +1,6 @@
+﻿Server:  UnKnown
+Address:  fe80::8ede:f9ff:fee4:d318
+
+Name:    google.com
+Addresses:  2a00:1450:4007:80f::200e
+	  172.217.20.46

@@ -1,0 +1,69 @@
+C:\Users\Ivan>cd "C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>mkdir "logs\10_FILES"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>mkdir "sandbox_cmd"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба>cd sandbox_cmd
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>cd > "..\logs\10_FILES\01_pwd.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>dir > "..\logs\10_FILES\02_dir.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>dir /a > "..\logs\10_FILES\03_dir_all.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>tree /f > "..\logs\10_FILES\04_tree.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>mkdir A
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>mkdir A\B
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>mkdir A\B\C
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>echo Первый файл> file1.txt
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>echo First file> file1.txt
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>echo Second one> file2.txt
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>type file1.txt
+First file
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>(dir & type file1.txt) > "..\logs\10_FILES\05_create_files.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>copy file1.txt A\
+        1 file(s) copied.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>copy file2.txt A\B\
+        1 file(s) copied.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>xcopy A A_copy /E /I /Y
+A\file1.txt
+A\B\file2.txt
+2 File(s) copied
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>(dir A & dir A\B & dir A_copy) > "..\logs\10_FILES\06_copy.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>move file2.txt A\B\
+Overwrite C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd\A\B\file2.txt? (Yes/No/All): Yes
+        1 file(s) moved.
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>(dir & dir A\B) > "..\logs\10_FILES\07_move.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>ren file1.txt file1_renamed.txt
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>ren A_copy A_backup
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>(dir & dir A_backup) > "..\logs\10_FILES\08_rename.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>del A\B\file2.txt
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>rmdir /S /Q A_backup
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>(dir A\B & dir) > "..\logs\10_FILES\09_delete.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>type A\file1.txt > "..\logs\10_FILES\10_type.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>findstr "First" A\file1.txt > "..\logs\10_FILES\11_findstr.txt"
+
+C:\Users\Ivan\MISoS\4 семестр\Клиент-серверные приложения и сетевые технологии\сети\2 лаба\sandbox_cmd>
