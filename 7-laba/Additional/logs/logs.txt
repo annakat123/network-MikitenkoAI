@@ -1,0 +1,67 @@
+Testing settings
+
+C:\>ping 192.168.10.1
+
+Pinging 192.168.10.1 with 32 bytes of data:
+
+Reply from 192.168.10.1: bytes=32 time<1ms TTL=255
+Reply from 192.168.10.1: bytes=32 time<1ms TTL=255
+Reply from 192.168.10.1: bytes=32 time<1ms TTL=255
+Reply from 192.168.10.1: bytes=32 time=1ms TTL=255
+
+Ping statistics for 192.168.10.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 192.168.10.53
+
+Pinging 192.168.10.53 with 32 bytes of data:
+
+Reply from 192.168.10.53: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.53: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.53: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.53: bytes=32 time=6ms TTL=128
+
+Ping statistics for 192.168.10.53:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 6ms, Average = 1ms
+
+C:\>ping 192.168.10.80
+
+Pinging 192.168.10.80 with 32 bytes of data:
+
+Reply from 192.168.10.80: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.80: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.80: bytes=32 time<1ms TTL=128
+Reply from 192.168.10.80: bytes=32 time=1ms TTL=128
+
+Ping statistics for 192.168.10.80:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>ping 2001:DB8:10:1::80
+
+Pinging 2001:DB8:10:1::80 with 32 bytes of data:
+
+Reply from 2001:DB8:10:1::80: bytes=32 time<1ms TTL=128
+Reply from 2001:DB8:10:1::80: bytes=32 time<1ms TTL=128
+Reply from 2001:DB8:10:1::80: bytes=32 time<1ms TTL=128
+Reply from 2001:DB8:10:1::80: bytes=32 time<1ms TTL=128
+
+Ping statistics for 2001:DB8:10:1::80:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>nslookup web.local
+
+Server: [2001:DB8:10:1::53]
+Address:  2001:DB8:10:1::53
+
+Non-authoritative answer:
+Name:   web.local
+Address:   2001:DB8:10:1::80
+           

@@ -1,0 +1,58 @@
+Just everything is ok:
+
+R1>enable
+R1#show ipv6 interface brief
+GigabitEthernet0/0         [up/up]
+    unassigned
+GigabitEthernet0/1         [up/up]
+    FE80::1
+    2001:DB8:1:1::1
+GigabitEthernet0/2         [up/up]
+    FE80::1
+    2001:DB8:1:2::1
+Serial0/0/0                [up/up]
+    FE80::1
+    2001:DB8:1:A001::2
+Serial0/0/1                [administratively down/down]
+    unassigned
+Vlan1                      [administratively down/down]
+    unassigned
+R1#show ipv6 route
+IPv6 Routing Table - 8 entries
+Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP
+       U - Per-user Static route, M - MIPv6
+       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary
+       ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2
+       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       D - EIGRP, EX - EIGRP external
+S   ::/0 [1/0]
+     via Serial0/0/0, directly connected
+C   2001:DB8:1:1::/64 [0/0]
+     via GigabitEthernet0/1, directly connected
+L   2001:DB8:1:1::1/128 [0/0]
+     via GigabitEthernet0/1, receive
+C   2001:DB8:1:2::/64 [0/0]
+     via GigabitEthernet0/2, directly connected
+L   2001:DB8:1:2::1/128 [0/0]
+     via GigabitEthernet0/2, receive
+C   2001:DB8:1:A001::/64 [0/0]
+     via Serial0/0/0, directly connected
+L   2001:DB8:1:A001::2/128 [0/0]
+     via Serial0/0/0, receive
+L   FF00::/8 [0/0]
+     via Null0, receive
+R1#
+
+R1#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     10.10.1.1       YES manual up                    up 
+GigabitEthernet0/1     192.168.0.1     YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES unset  up                    up 
+Serial0/0/0            209.165.201.2   YES manual up                    up 
+Serial0/0/1            unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1#
+
+
+
