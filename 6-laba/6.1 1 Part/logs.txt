@@ -1,0 +1,32 @@
+Normal one
+C:\>ping 10.10.10.3
+
+Pinging 10.10.10.3 with 32 bytes of data:
+
+Reply from 10.10.10.3: bytes=32 time=15ms TTL=127
+Reply from 10.10.10.3: bytes=32 time=19ms TTL=127
+Reply from 10.10.10.3: bytes=32 time=14ms TTL=127
+Reply from 10.10.10.3: bytes=32 time<1ms TTL=127
+
+Ping statistics for 10.10.10.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 19ms, Average = 12ms
+
+
+
+Simulation
+C:\>ping 10.10.10.3
+
+Pinging 10.10.10.3 with 32 bytes of data:
+
+Reply from 10.10.10.3: bytes=32 time=19ms TTL=127
+Reply from 10.10.10.3: bytes=32 time=13ms TTL=127
+Reply from 10.10.10.3: bytes=32 time=16ms TTL=127
+Reply from 10.10.10.3: bytes=32 time=16ms TTL=127
+
+Ping statistics for 10.10.10.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 13ms, Maximum = 19ms, Average = 16ms
+

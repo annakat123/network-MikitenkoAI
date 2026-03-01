@@ -1,0 +1,50 @@
+Sales check:
+C:\>ipconfig
+
+FastEthernet0 Connection:(default port)
+
+   Connection-specific DNS Suffix..: lab.local 
+   Link-local IPv6 Address.........: FE80::201:97FF:FE13:ECE0
+   IPv6 Address....................: 2001:DB8:1:1:93DB:F8F6:86D8:31ED
+   IPv4 Address....................: 0.0.0.0
+   Subnet Mask.....................: 0.0.0.0
+   Default Gateway.................: FE80::1
+                                     0.0.0.0
+
+Bluetooth Connection:
+
+   Connection-specific DNS Suffix..: lab.local 
+   Link-local IPv6 Address.........: ::
+   IPv6 Address....................: ::
+   IPv4 Address....................: 0.0.0.0
+   Subnet Mask.....................: 0.0.0.0
+   Default Gateway.................: ::
+                                     0.0.0.0
+
+C:\>ping 2001:DB8:1:1::1
+
+Pinging 2001:DB8:1:1::1 with 32 bytes of data:
+
+Reply from 2001:DB8:1:1::1: bytes=32 time<1ms TTL=255
+Reply from 2001:DB8:1:1::1: bytes=32 time<1ms TTL=255
+Reply from 2001:DB8:1:1::1: bytes=32 time<1ms TTL=255
+Reply from 2001:DB8:1:1::1: bytes=32 time<1ms TTL=255
+
+Ping statistics for 2001:DB8:1:1::1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 2001:DB8:1:2::4
+
+Pinging 2001:DB8:1:2::4 with 32 bytes of data:
+
+Reply from 2001:DB8:1:2::4: bytes=32 time<1ms TTL=127
+Reply from 2001:DB8:1:2::4: bytes=32 time<1ms TTL=127
+Reply from 2001:DB8:1:2::4: bytes=32 time<1ms TTL=127
+Reply from 2001:DB8:1:2::4: bytes=32 time<1ms TTL=127
+
+Ping statistics for 2001:DB8:1:2::4:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms

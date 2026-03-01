@@ -1,0 +1,84 @@
+
+C:\>ping 10.10.10.3
+
+Pinging 10.10.10.3 with 32 bytes of data:
+
+Reply from 10.10.10.3: bytes=32 time=25ms TTL=128
+Reply from 10.10.10.3: bytes=32 time=15ms TTL=128
+Reply from 10.10.10.3: bytes=32 time=16ms TTL=128
+Reply from 10.10.10.3: bytes=32 time=12ms TTL=128
+
+Ping statistics for 10.10.10.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 12ms, Maximum = 25ms, Average = 17ms
+
+C:\>
+
+
+
+from 172.16.31.2
+C:\>ping 172.16.31.3
+
+Pinging 172.16.31.3 with 32 bytes of data:
+
+Reply from 172.16.31.3: bytes=32 time=8ms TTL=128
+Reply from 172.16.31.3: bytes=32 time=4ms TTL=128
+Reply from 172.16.31.3: bytes=32 time=4ms TTL=128
+Reply from 172.16.31.3: bytes=32 time=4ms TTL=128
+
+Ping statistics for 172.16.31.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 8ms, Average = 5ms
+	
+
+from 172.16.31.4
+C:\>ping 172.16.31.5
+
+Pinging 172.16.31.5 with 32 bytes of data:
+
+Reply from 172.16.31.5: bytes=32 time=8ms TTL=128
+Reply from 172.16.31.5: bytes=32 time=4ms TTL=128
+Reply from 172.16.31.5: bytes=32 time=4ms TTL=128
+Reply from 172.16.31.5: bytes=32 time=4ms TTL=128
+
+Ping statistics for 172.16.31.5:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 8ms, Average = 5ms
+
+
+
+from 172.16.31.4
+C:\>ping 10.10.10.2
+
+Pinging 10.10.10.2 with 32 bytes of data:
+
+Reply from 10.10.10.2: bytes=32 time=13ms TTL=127
+Reply from 10.10.10.2: bytes=32 time=13ms TTL=127
+Reply from 10.10.10.2: bytes=32 time=12ms TTL=127
+Reply from 10.10.10.2: bytes=32 time=12ms TTL=127
+
+Ping statistics for 10.10.10.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 12ms, Maximum = 13ms, Average = 12ms
+
+
+
+from 172.16.31.3
+C:\>ping 10.10.10.2
+
+Pinging 10.10.10.2 with 32 bytes of data:
+
+Reply from 10.10.10.2: bytes=32 time=16ms TTL=127
+Reply from 10.10.10.2: bytes=32 time=15ms TTL=127
+Reply from 10.10.10.2: bytes=32 time=17ms TTL=127
+Reply from 10.10.10.2: bytes=32 time=17ms TTL=127
+
+Ping statistics for 10.10.10.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 15ms, Maximum = 17ms, Average = 16ms
+

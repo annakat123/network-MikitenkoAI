@@ -1,0 +1,52 @@
+Цель исследования
+
+Настроить автоматическую выдачу IPv6-адресов через DHCPv6 на R1 для одной из сетей 
+(например 2001:DB8:1:1::/64)
+
+
+В IPv6 есть два режима:
+SLAAC – адрес формируется автоматически через Router Advertisement
+DHCPv6 – сервер выдает адрес, DNS и другие параметры
+
+I will setup an stateful DHCPv6
+
+1️) Создать DHCPv6 pool
+
+На R1:
+
+enable
+configure terminal
+ipv6 dhcp pool LAN1
+address prefix 2001:DB8:1:1::/64
+dns-server 2001:4860:4860::8888
+domain-name lab.local
+
+
+2) Привязать DHCP к интерфейсу
+interface gigabitEthernet 0/0
+ipv6 dhcp server LAN1
+ipv6 nd managed-config-flag
+
+
+3) Убрать статическую IPv6 на Sales и Billing
+
+На Sales:
+
+Desktop → IP Configuration
+IPv6 → выбрать Automatic
+
+То же самое для Billing.
+
+
+4) Проверка
+
+На Sales:
+
+ipconfig
+
+IPv6 должен быть выдан автоматически из диапазона 2001:DB8:1:1::/64.
+
+Проверить:
+
+ping 2001:DB8:1:1::1
+ping 2001:DB8:1:2::4
