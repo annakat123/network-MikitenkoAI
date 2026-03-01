@@ -1,0 +1,58 @@
+Pinging 10.0.0.254 with 32 bytes of data:
+
+Reply from 10.0.0.254: bytes=32 time=2ms TTL=126
+Reply from 10.0.0.254: bytes=32 time=4ms TTL=126
+Reply from 10.0.0.254: bytes=32 time=6ms TTL=126
+Reply from 10.0.0.254: bytes=32 time=4ms TTL=126
+
+Ping statistics for 10.0.0.254:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 6ms, Average = 4ms
+	
+	
+
+Home -> switch
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ping 172.16.0.2
+
+Pinging 172.16.0.2 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Reply from 172.16.0.2: bytes=32 time=14ms TTL=252
+Reply from 172.16.0.2: bytes=32 time=21ms TTL=252
+
+Ping statistics for 172.16.0.2:
+    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 14ms, Maximum = 21ms, Average = 17ms
+
+C:\>ping 172.16.0.2
+
+Pinging 172.16.0.2 with 32 bytes of data:
+
+Reply from 172.16.0.2: bytes=32 time=10ms TTL=252
+Reply from 172.16.0.2: bytes=32 time=11ms TTL=252
+Reply from 172.16.0.2: bytes=32 time=13ms TTL=252
+Reply from 172.16.0.2: bytes=32 time=15ms TTL=252
+
+Ping statistics for 172.16.0.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 10ms, Maximum = 15ms, Average = 12ms
+
+C:\>
+
+
+
+Configuration terminal -> terminal
+Router0>enable
+Router0#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/0        192.168.2.1     YES manual up                    up 
+FastEthernet0/1        10.0.0.1        YES manual up                    up 
+Serial0/0/0            172.31.0.1      YES manual up                    up 
+Serial0/0/1            unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+Router0#
