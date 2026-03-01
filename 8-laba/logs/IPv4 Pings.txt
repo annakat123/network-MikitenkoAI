@@ -1,0 +1,97 @@
+C:\>ping 172.16.10.1
+
+Pinging 172.16.10.1 with 32 bytes of data:
+
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.1: bytes=32 time<1ms TTL=255
+
+Ping statistics for 172.16.10.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 172.16.10.62
+
+Pinging 172.16.10.62 with 32 bytes of data:
+
+Request timed out.
+Reply from 172.16.10.62: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.62: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.62: bytes=32 time<1ms TTL=255
+
+Ping statistics for 172.16.10.62:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 172.16.10.62
+
+Pinging 172.16.10.62 with 32 bytes of data:
+
+Reply from 172.16.10.62: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.62: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.62: bytes=32 time<1ms TTL=255
+Reply from 172.16.10.62: bytes=32 time<1ms TTL=255
+
+Ping statistics for 172.16.10.62:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 172.16.10.2
+
+Pinging 172.16.10.2 with 32 bytes of data:
+
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+Reply from 172.16.10.2: bytes=32 time<1ms TTL=128
+
+Ping statistics for 172.16.10.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 172.16.10.66
+
+Pinging 172.16.10.66 with 32 bytes of data:
+
+Request timed out.
+Reply from 172.16.10.66: bytes=32 time<1ms TTL=127
+Reply from 172.16.10.66: bytes=32 time<1ms TTL=127
+Reply from 172.16.10.66: bytes=32 time<1ms TTL=127
+
+Ping statistics for 172.16.10.66:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 172.16.10.66
+
+Pinging 172.16.10.66 with 32 bytes of data:
+
+Reply from 172.16.10.66: bytes=32 time<1ms TTL=127
+Reply from 172.16.10.66: bytes=32 time<1ms TTL=127
+Reply from 172.16.10.66: bytes=32 time<1ms TTL=127
+Reply from 172.16.10.66: bytes=32 time<1ms TTL=127
+
+Ping statistics for 172.16.10.66:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 172.16.10.67
+
+Pinging 172.16.10.67 with 32 bytes of data:
+
+Request timed out.
+Reply from 172.16.10.67: bytes=32 time<1ms TTL=127
+Reply from 172.16.10.67: bytes=32 time<1ms TTL=127
+Reply from 172.16.10.67: bytes=32 time=1ms TTL=127
+
+Ping statistics for 172.16.10.67:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms

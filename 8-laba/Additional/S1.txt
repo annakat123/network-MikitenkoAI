@@ -1,0 +1,110 @@
+S1>enable
+S1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#vlan 10
+S1(config-vlan)#name SALES
+S1(config-vlan)#exit
+S1(config)#vlan 20
+S1(config-vlan)#name ACCOUNTING
+S1(config-vlan)#exit
+S1(config)#vlan 30
+S1(config-vlan)#name MANAGEMENT
+S1(config-vlan)#exit
+S1(config)#interface fa0/1
+S1(config-if)#switchport mode access
+S1(config-if)#switchport access vlan 10
+S1(config-if)#
+S1(config-if)#exit
+S1(config)#interface fa0/2
+S1(config-if)#interface fa0/2
+S1(config-if)#
+S1(config-if)#switchport access vlan 20
+S1(config-if)#exit
+S1(config)#interface fa0/3
+S1(config-if)#switchport mode access
+S1(config-if)#switchport access vlan 30
+S1(config-if)#exit
+
+S1#show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/4, Fa0/5, Fa0/6, Fa0/7
+                                                Fa0/8, Fa0/9, Fa0/10, Fa0/11
+                                                Fa0/12, Fa0/13, Fa0/14, Fa0/15
+                                                Fa0/16, Fa0/17, Fa0/18, Fa0/19
+                                                Fa0/20, Fa0/21, Fa0/22, Fa0/23
+                                                Fa0/24, Gig0/1, Gig0/2
+10   SALES                            active    Fa0/1
+20   ACCOUNTING                       active    Fa0/2
+30   MANAGEMENT                       active    Fa0/3
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active   
+
+
+
+trunk:
+S1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#interface fa0/24
+S1(config-if)#switchport mode trunk
+S1(config-if)#switchport trunk allowed vlan 10,20,30
+S1(config-if)#exit
+S1(config)#end
+S1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+S1#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+
+S1#show interfaces fa0/24 switchport
+Name: Fa0/24
+Switchport: Enabled
+Administrative Mode: trunk
+Operational Mode: down
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+Voice VLAN: none
+Administrative private-vlan host-association: none
+Administrative private-vlan mapping: none
+Administrative private-vlan trunk native VLAN: none
+Administrative private-vlan trunk encapsulation: dot1q
+Administrative private-vlan trunk normal VLANs: none
+Administrative private-vlan trunk private VLANs: none
+Operational private-vlan: none
+Trunking VLANs Enabled: 10,20,30
+Pruning VLANs Enabled: 2-1001
+Capture Mode Disabled
+Capture VLANs Allowed: ALL
+Protected: false
+Unknown unicast blocked: disabled
+Unknown multicast blocked: disabled
+Appliance trust: none
+
+
+
+S1#show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/4, Fa0/5, Fa0/6, Fa0/7
+                                                Fa0/8, Fa0/9, Fa0/10, Fa0/11
+                                                Fa0/12, Fa0/13, Fa0/14, Fa0/15
+                                                Fa0/16, Fa0/17, Fa0/18, Fa0/19
+                                                Fa0/20, Fa0/21, Fa0/22, Fa0/23
+                                                Fa0/24, Gig0/1, Gig0/2
+10   SALES                            active    Fa0/1
+20   ACCOUNTING                       active    Fa0/2
+30   MANAGEMENT                       active    Fa0/3
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active   
